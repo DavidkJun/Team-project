@@ -2,7 +2,6 @@ import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
-
 export default hopeTheme({
   hostname: "https://vuepress-theme-hope-docs-demo.netlify.app",
 
@@ -28,7 +27,10 @@ export default hopeTheme({
 
  // integrate plantuml into theme 
 
-  plugins: {
+  
+  plugins: 
+  {
+  
     // All features are enabled for demo, only preserve features you need here
     mdEnhance: {
       align: true,
