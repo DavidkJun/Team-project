@@ -1,8 +1,8 @@
 {
   "name": "db-course-template",
   "version": "2.0.0",
-  "description": "A project of vuepress-theme-hope",
-  "license": "MIT",
+  "description": "",
+  "license": "ECL 2.0",
   "type": "module",
   "scripts": {
     "docs:build": "vuepress-vite build docs",

@@ -11,7 +11,7 @@ export default hopeTheme({
 
   editLink: false,
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  repo: "dimatortik/db-course-hope-template",
 
   docsDir: "docs",
   // navbar
@@ -60,7 +60,6 @@ export default hopeTheme({
       sup: true,
       tabs: true,
       vPre: true,
-      mermaid: true,
     },
   },
 });
