@@ -7,10 +7,8 @@ export default hopeTheme({
 
   iconAssets: "fontawesome-with-brands",
 
-  // logo: "https://theme-hope-assets.vuejs.press/logo.svg",
-
   editLink: false,
-
+  // Замінити на назву свого репозиторія
   repo: "dimatortik/db-course-hope-template",
 
   docsDir: "docs",
@@ -20,14 +18,11 @@ export default hopeTheme({
   // sidebar
   sidebar,
 
-
+  // Підставити рік та Ваше імʼя
   footer: "ECL 2.0 Licensed | Copyright © [YYYY] [Your Name] ",
 
   displayFooter: true,
 
- // integrate plantuml into theme 
-
-  
   plugins: 
   {
   
