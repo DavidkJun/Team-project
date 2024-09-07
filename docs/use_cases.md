@@ -90,6 +90,7 @@
     padding: 1em;"
     >
 
+```plantuml
 @startuml
 
     right header
@@ -144,7 +145,7 @@
     end footer
 
 @enduml
-
+```
 
 
 **Діаграма прецедентів**
