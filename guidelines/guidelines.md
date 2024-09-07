@@ -30,7 +30,7 @@
 
 **Структура документів:**
 
-Дивись у ["Аналіз предметної області"](../docs/requirements/state-of-the-art.md) та ["Запити зацікавлених осіб"](../docs/requirements/stakeholders-needs.md).  
+Дивись у ["Аналіз предметної області"](../docs/state-of-the-art.md) та ["Запити зацікавлених осіб"](../docs/stakeholders-needs.md).  
 
 **Завдання:**
 

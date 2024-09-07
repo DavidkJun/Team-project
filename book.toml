@@ -1,0 +1,9 @@
+[book]
+authors = ["Ivan \"ukrustacean\" Dereviankin"]
+language = "uk"
+multilingual = false
+src = "docs"
+title = "Назва проєкту"
+
+[preprocessor.plantuml]
+plantuml-cmd="plantuml"
