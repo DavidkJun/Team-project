@@ -1,8 +1,10 @@
 [book]
-authors = ["Ivan \"ukrustacean\" Dereviankin"]
 language = "uk"
 multilingual = false
 src = "docs"
+
+# Замініть авторство проєкта на своє
+authors = ["Ivan \"ukrustacean\" Dereviankin"]
 
 # Змініть назву проєкта на свою
 title = "Назва проєкту"
