@@ -3,7 +3,10 @@ authors = ["Ivan \"ukrustacean\" Dereviankin"]
 language = "uk"
 multilingual = false
 src = "docs"
+
+# Змініть назву проєкта на свою
 title = "Назва проєкту"
 
 [preprocessor.plantuml]
-plantuml-cmd="plantuml"
+plantuml-cmd = "http://www.plantuml.com/plantuml"
+use-data-uris = true
