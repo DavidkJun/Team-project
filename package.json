@@ -2,7 +2,7 @@
   "name": "db-course-template",
   "version": "2.0.0",
   "description": "",
-  "license": "ECL 2.0",
+  "license": "GPL-3.0",
   "type": "module",
   "scripts": {
     "docs:build": "vuepress-vite build docs",
