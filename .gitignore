@@ -6,3 +6,5 @@ docs/.vuepress/.temp/
 docs/.vuepress/dist/
 .idea/
 book/
+.mdbook-plantuml-cache/
+docs/mdbook-plantuml-img/
