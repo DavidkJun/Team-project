@@ -3,12 +3,11 @@ language = "uk"
 multilingual = false
 src = "docs"
 
-# Замініть авторство проєкта на своє
-authors = ["Ivan \"ukrustacean\" Dereviankin"]
+authors = ["Davyd \"DavidkJun\" Krykota", "Veronika \"nikama-s\" Maslo","Veronica  \"namanica\" Pylypchuk", "Illia \"yur-ochka \" Yurchenko", "Kyryl \"Kiryaoo \" Kozarezov ", "Tymur \"Homa4\" Naboka", " Aryna \"nevsetakpohano\" Babanina"]
 
-# Змініть назву проєкта на свою
-title = "Назва проєкту"
 
+
+title = "Організація та управління опитуваннями для експертів"
 [preprocessor.plantuml]
 plantuml-cmd = "http://www.plantuml.com/plantuml"
 use-data-uris = true
