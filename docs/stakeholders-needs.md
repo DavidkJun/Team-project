@@ -40,7 +40,21 @@ FURPS — це акронім, що представляє модель для �
 
 ### Посилання
 
-*[Розділ містить повний список всіх документів, про які згадується.]*
+[Запити зацікавлених осіб]()
+
+[Інформаційна система](https://en.wikipedia.org/wiki/Information_system)
+
+[Опитувальна форма](https://en.wikipedia.org/wiki/Questionnaire)
+
+[Користувач](https://en.wikipedia.org/wiki/User_(telecommunications))
+
+[Реєстрація](https://en.wikipedia.org/wiki/Account_creation)
+
+[Замовники](https://en.wikipedia.org/wiki/Client_(business))
+
+[Розробники](https://en.wikipedia.org/wiki/Software_development#Workers)
+
+[FURPS](https://en.wikipedia.org/wiki/FURPS)
 
 
 ## Короткий зміст
