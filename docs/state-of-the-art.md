@@ -172,4 +172,67 @@
 
 ## Посилання
 
-*[Розділ містить повний список всіх документів, про які згадується.]*
+**FURPS** — модель для оцінки програмних систем, яка охоплює п'ять основних аспектів: Functionality, Usability, Reliability, Performance, Supportability.  
+   Джерело: [FURPS Model](https://en.wikipedia.org/wiki/FURPS)
+
+**PayPal** — міжнародна електронна платіжна система, яка надає послуги для транскордонних платежів.  
+   Джерело: [PayPal Overview](https://www.paypal.com/us/webapps/mpp/about)
+
+**Google Sheets** — безкоштовний вебдодаток для роботи з електронними таблицями, що входить до складу Google Диск.  
+   Джерело: [Google Sheets Help](https://support.google.com/docs/?hl=uk#topic=1382883)
+
+**Емпіричні дані** — інформація, яка підтверджує істинність або хибність твердження, базуючись на досвіді чи експериментах.  
+   Джерело: [Empirical Data Definition](https://www.investopedia.com/terms/e/empirical-data.asp)
+
+**MailChimp** — сервіс електронного маркетингу для e-mail розсилок.  
+   Джерело: [MailChimp Overview](https://mailchimp.com/)
+
+**Дельфійський оракул** — відомий оракул у храмі Аполлона в Дельфах, один з найдавніших релігійних центрів Стародавньої Греції.  
+   Джерело: [Delphic Oracle](https://en.wikipedia.org/wiki/Delphic_oracle)
+
+**JavaScript** — динамічна мова програмування, що використовується для створення інтерактивних вебсторінок.  
+   Джерело: [JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
+
+**CSS (Cascading Style Sheets)** — мова стилів для опису зовнішнього вигляду вебсторінок.  
+   Джерело: [CSS Basics](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps)
+
+**HTML (HyperText Markup Language)** — стандартизована мова розмітки документів для перегляду вебсторінок у браузері.  
+   Джерело: [HTML Introduction](https://developer.mozilla.org/en-US/docs/Web/HTML)
+
+**CRM (Управління відносинами з клієнтами)** — концепція для управління взаємовідносинами зі споживачами, включаючи збір і аналіз інформації про них.  
+    Джерело: [What is CRM?](https://www.salesforce.com/crm/what-is-crm/)
+
+**SOC 2** — стандарт для аудиту контрольних процедур в IT-організаціях, який забезпечує безпеку і управління ризиками.  
+    Джерело: [SOC 2 Guide](https://www.aicpa.org/interestareas/frc/assuranceadvisoryservices/sorhome.html)
+
+**GDPR (General Data Protection Regulation)** — регламент ЄС щодо захисту персональних даних.  
+    Джерело: [GDPR Official Website](https://gdpr.eu/)
+
+**CAPTCHA** — тест для визначення, чи взаємодіє з системою людина чи комп'ютер.  
+    Джерело: [What is CAPTCHA?](https://en.wikipedia.org/wiki/CAPTCHA)
+
+**Salesforce** — розробник CRM-системи, яка надається за моделлю SaaS.  
+    Джерело: [Salesforce Overview](https://www.salesforce.com/)
+
+**HIPAA (Health Insurance Portability and Accountability Act)** — акт про мобільність та підзвітність медичного страхування.  
+    Джерело: [HIPAA Overview](https://www.hhs.gov/hipaa/index.html)
+
+**JotForm** — онлайн-платформа для створення форм з широким набором функцій та інтеграцій.  
+    Джерело: [JotForm Official Website](https://www.jotform.com/)
+
+**Ningaforms** — інструмент для створення форм з підтримкою інтеграції з WordPress та можливістю збору платежів.  
+    Джерело: [Ningaforms Official Website](https://www.ningaforms.com/)
+
+**123FormBuilder** — платформа для створення форм з інтеграцією з PayPal, Salesforce та іншими сервісами.  
+    Джерело: [123FormBuilder Official Website](https://www.123formbuilder.com/)
+
+**Paperform** — сервіс для створення налаштовуваних форм з підтримкою HTML/CSS та інтеграцією з понад 3000 додатками.  
+    Джерело: [Paperform Official Website](https://paperform.co/)
+
+**Google Forms** — інструмент для створення онлайн-форм з автоматичним збиранням відповідей у Google Sheets.  
+    Джерело: [Google Forms Official Website](https://www.google.com/forms/about/)
+
+**Wufoo** — сервіс для створення онлайн-форм для опитувань, збору даних та платежів з інтеграцією з PayPal, Stripe та іншими.  
+    Джерело: [Wufoo Official Website](https://www.wufoo.com/)
+
+
