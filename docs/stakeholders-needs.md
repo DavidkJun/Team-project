@@ -265,5 +265,6 @@ FURPS — це акронім, що представляє модель для �
 
 ## Загальна діаграма прецендентів
 
+![image](https://github.com/user-attachments/assets/e803c8d0-6945-466b-a2e9-a4e63d7fc5cf)
 
-![image](https://github.com/user-attachments/assets/1549242e-6bc7-4397-8507-50e0c5acc8a1)
+
