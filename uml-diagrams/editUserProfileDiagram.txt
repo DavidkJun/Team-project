@@ -1,0 +1,46 @@
+@startuml
+
+    title
+        <font size=32 color=black>UC_3. Редагування особистих даних
+        <font size=32 color=black>Діаграма прецедентів
+    end title
+
+    skinparam actorStyle awesome
+
+    actor "User" as User #89b1be
+    actor "Система" as System #beb289
+
+    package UCD_3 {
+        usecase "<b>UC_3</b>\nРедагувати особисті дані" as UC_3 #89be96
+    }
+
+    usecase "<b>UC_3.1</b>\nВідкрити сторінку профілю" as UC_3_1
+    usecase "<b>UC_3.2</b>\nЗмінити дані профілю" as UC_3_2
+    usecase "<b>UC_3.2.1</b>\nПеревірити правильність введених даних" as UC_3_2_1
+    usecase "<b>UC_3.3</b>\nЗберегти зміни" as UC_3_3
+
+    UC_3_1 .u.> UC_3 :includes
+    UC_3_2 .u.> UC_3 :includes
+    UC_3_2_1 .u.> UC_3_2 :includes
+    UC_3_3 .u.> UC_3_2_1 :includes
+
+    System -> UC_3
+    User -> UC_3_1
+
+    rectangle "Виключні ситуації" {
+        usecase "<b>EX_1</b>\nНеправильний формат облікових даних" as EX_1
+        usecase "<b>EX_2</b>\nПроблеми із сервером" as EX_2
+        usecase "<b>EX_3</b>\nДані не змінені" as EX_3
+
+        UC_3_2_1 .u.> EX_1 :extends
+        UC_3_3 .u.> EX_2 :extends
+        UC_3_3 .u.> EX_3 :extends
+    }
+
+    right footer
+        Аналітичний портал. Модель прецедентів.
+        НТУУ КПІ ім.І.Сікорського
+        Киів-2024
+    end footer
+
+@enduml

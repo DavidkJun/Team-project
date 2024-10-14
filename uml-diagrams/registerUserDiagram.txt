@@ -1,0 +1,50 @@
+@startuml
+
+    title
+        <font size=32 color=black>UC_1. Реєстрація користувача
+        <font size=32 color=black>Діаграма прецедентів
+    end title
+
+    skinparam actorStyle awesome
+
+    actor "User" as User #89b1be
+    actor "Система" as System #beb289
+
+    package UCD_1 {
+        usecase "<b>UC_1</b>\nЗареєструватись" as UC_1 #89be96
+    }
+
+    usecase "<b>UC_1.1</b>\nВідкрити інтерфейс реєстрації" as UC_1_1
+    usecase "<b>UC_1.2</b>\nВвести дані" as UC_1_2
+    usecase "<b>UC_1.2.1</b>\nПідтвердити пароль" as UC_1_2_1
+    usecase "<b>UC_1.2.2</b>\nПеревірити введені дані" as UC_1_2_2
+    usecase "<b>UC_1.3</b>\nНадіслати підтвердження на email" as UC_1_3
+    usecase "<b>UC_1.4</b>\nПідтвердити реєстрацію та увійти у свій аккаунт" as UC_1_4
+
+    UC_1_1 .u.> UC_1 :includes
+    UC_1_2 .u.> UC_1 :includes
+    UC_1_2_1 .u.> UC_1_2 :includes
+    UC_1_2_2 .u.> UC_1_2 :includes
+    UC_1_3 .u.> UC_1_2_2 :includes
+    UC_1_4 .d.> UC_1_3 :includes
+
+    System -> UC_1
+    User -> UC_1_1
+
+    rectangle "Виключні ситуації" {
+        usecase "<b>EX_1</b>\nНекоректні дані" as EX_1
+        usecase "<b>EX_2</b>\nПроблеми із сервером" as EX_2
+        usecase "<b>EX_3</b>\nКористувач уже зареєстрований" as EX_3
+
+        UC_1_2_2 .u.> EX_1 :extends
+        UC_1_4 .u.> EX_3 :extends
+        UC_1_3 .u.> EX_2 :extends
+    }
+
+    right footer
+        Аналітичний портал. Модель прецедентів.
+        НТУУ КПІ ім.І.Сікорського
+        Киів-2024
+    end footer
+
+@enduml
