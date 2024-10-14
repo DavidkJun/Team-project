@@ -496,6 +496,36 @@
 <h2 id="Короткий-зміст"><a class="header" href="#Короткий-зміст">Короткий зміст</a></h2>
 <p><em>Froggy</em> — це інформаційна система, яка надає адміністраторам можливість створювати, поширювати та управляти опитуваннями, а також зберігати дані респондентів. Система призначена для легкого використання як адміністраторами, так і користувачами. Адміністратори можуть створювати форми з різними типами запитань, поширювати опитування за унікальними посиланнями та отримувати детальні результати з можливістю аналізу. Froggy забезпечує гнучкість і зручність для широкого кола користувачів, зберігаючи високі стандарти безпеки та продуктивності.</p>
 <h2 id="Характеристика-ділових-процесів"><a class="header" href="#Характеристика-ділових-процесів">Характеристика ділових процесів</a></h2>
+<h3 id="Додаткові-опції-для-підготовки-користувача-до-роботи-з-інтерфейсом-системи"><a class="header" href="#Додаткові-опції-для-підготовки-користувача-до-роботи-з-інтерфейсом-системи">Додаткові опції для підготовки користувача до роботи з інтерфейсом системи</a></h3>
+<div class="table-wrapper"><table><thead><tr><th><strong>Поле</strong></th><th><strong>Значення</strong></th></tr></thead><tbody>
+<tr><td><strong>ID</strong></td><td>registerUser</td></tr>
+<tr><td><strong>Назва</strong></td><td>Реєстрація користувача</td></tr>
+<tr><td><strong>Учасники</strong></td><td>User, система</td></tr>
+<tr><td><strong>Передумови</strong></td><td>- User не має облікового запису <br> - User має доступ до інтерфейсу реєстрації</td></tr>
+<tr><td><strong>Результат</strong></td><td>✅ Користувач успішно зареєстрований у системі</td></tr>
+<tr><td><strong>Виключні ситуації</strong></td><td>⚠️ Неповні або некоректні дані <br> ⚠️ Проблеми із сервером <br> ⚠️ Користувач уже зареєстрований</td></tr>
+<tr><td><strong>Основний сценарій</strong></td><td>1. User відкриває інтерфейс реєстрації. <br> 2. Вводить необхідну інформацію (ім'я, прізвище, email, пароль). <br> 3. Підтверджує пароль. <br> 4. Приймає умови використання системи. <br> 5. Натискає кнопку реєстрації. <br> 6. Система надсилає підтвердження на email User. <br> 7. User підтверджує реєстрацію через email.</td></tr>
+</tbody></table>
+</div><div class="table-wrapper"><table><thead><tr><th><strong>Поле</strong></th><th><strong>Значення</strong></th></tr></thead><tbody>
+<tr><td><strong>ID</strong></td><td>loginUser</td></tr>
+<tr><td><strong>Назва</strong></td><td>Логін користувача - вхід у систему</td></tr>
+<tr><td><strong>Учасники</strong></td><td>User, система</td></tr>
+<tr><td><strong>Передумови</strong></td><td>- User має обліковий запис <br> - User знає свої облікові дані (email та пароль)</td></tr>
+<tr><td><strong>Результат</strong></td><td>✅ Користувач успішно увійшов у систему</td></tr>
+<tr><td><strong>Виключні ситуації</strong></td><td>⚠️ Неправильні облікові дані <br> ⚠️ Користувач забув пароль <br> ⚠️ Проблеми із сервером <br> ⚠️ Користувач не зареєстрований</td></tr>
+<tr><td><strong>Основний сценарій</strong></td><td>1. User відкриває інтерфейс входу в систему. <br> 2. Вводить email та пароль. <br> 3. Натискає кнопку "Увійти". <br> 4. Система перевіряє облікові дані. <br> 5. Якщо дані коректні, User отримує доступ до свого облікового запису.</td></tr>
+</tbody></table>
+</div><div class="table-wrapper"><table><thead><tr><th><strong>Поле</strong></th><th><strong>Значення</strong></th></tr></thead><tbody>
+<tr><td><strong>ID</strong></td><td>editUserProfile</td></tr>
+<tr><td><strong>Назва</strong></td><td>Редагування особистих даних</td></tr>
+<tr><td><strong>Учасники</strong></td><td>User, система</td></tr>
+<tr><td><strong>Передумови</strong></td><td>- User має обліковий запис <br> - User увійшов у свій акаунт <br> - User знаходиться на сторінці профілю</td></tr>
+<tr><td><strong>Результат</strong></td><td>✅ Особисті дані користувача успішно оновлені</td></tr>
+<tr><td><strong>Виключні ситуації</strong></td><td>⚠️ Неправильний формат облікових даних <br> ⚠️ Проблеми із сервером <br> ⚠️ Дані не змінені</td></tr>
+<tr><td><strong>Основний сценарій</strong></td><td>1. User відкриває сторінку профілю. <br> 2. Змінює необхідні дані (email або пароль, імʼя або прізвище, комбінації пунктів). <br> 3. Натискає кнопку збереження. <br> 4. Система перевіряє дані та зберігає зміни.</td></tr>
+</tbody></table>
+</div>
+<h3 id="Функціональні-опції-інтерфейсу-програми"><a class="header" href="#Функціональні-опції-інтерфейсу-програми">Функціональні опції інтерфейсу програми</a></h3>
 <div class="table-wrapper"><table><thead><tr><th><strong>Поле</strong></th><th><strong>Значення</strong></th></tr></thead><tbody>
 <tr><td><strong>ID</strong></td><td>createForm</td></tr>
 <tr><td><strong>Назва</strong></td><td>Створення форми</td></tr>
@@ -752,83 +782,205 @@
 <p>В цьому файлі необхідно перелічити всі документи, розроблені в проекті та дати посилання на них.</p>
 <p><em>Модель прецедентів повинна містити загальні оглядові діаграми та специфікації прецедентів.</em></p>
 <p>Вбудовування зображень діаграм здійснюється з використанням сервісу <a href="https://plantuml.com/">plantuml.com</a>.</p>
-<p>В markdown-файлі використовується опис діаграми</p>
-<pre><code class="language-md">
-&lt;center style="
-    border-radius:4px;
-    border: 1px solid #cfd7e6;
-    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
-    padding: 1em;"
-&gt;
-
-@startuml
-
-    right header
-        &lt;font size=24 color=black&gt;Package: &lt;b&gt;UCD_3.0
-    end header
-
-    title
-        &lt;font size=18 color=black&gt;UC_8. Редагувати конфігурацію порталу
-        &lt;font size=16 color=black&gt;Діаграма прецедентів
-    end title
-
-
-    actor "Користувач" as User #eeeeaa
-    
-    package UCD_1{
-        usecase "&lt;b&gt;UC_1&lt;/b&gt;\nПереглянути список \nзвітів" as UC_1 #aaeeaa
-    }
-    
-    usecase "&lt;b&gt;UC_1.1&lt;/b&gt;\nЗастосувати фільтр" as UC_1.1
-    usecase "&lt;b&gt;UC_1.2&lt;/b&gt;\nПереглянути метадані \nзвіту" as UC_1.2  
-    usecase "&lt;b&gt;UC_1.2.1&lt;/b&gt;\nДати оцінку звіту" as UC_1.2.1  
-    usecase "&lt;b&gt;UC_1.2.2&lt;/b&gt;\nПереглянути інформацію \nпро авторів звіту" as UC_1.2.2
-    
-    package UCD_1 {
-        usecase "&lt;b&gt;UC_4&lt;/b&gt;\nВикликати звіт" as UC_4 #aaeeaa
-    }
-    
-    usecase "&lt;b&gt;UC_1.1.1&lt;/b&gt;\n Використати \nпошукові теги" as UC_1.1.1  
-    usecase "&lt;b&gt;UC_1.1.2&lt;/b&gt;\n Використати \nрядок пошуку" as UC_1.1.2
-    usecase "&lt;b&gt;UC_1.1.3&lt;/b&gt;\n Використати \nавторів" as UC_1.1.3  
-    
-    
-    
-    User -&gt; UC_1
-    UC_1.1 .u.&gt; UC_1 :extends
-    UC_1.2 .u.&gt; UC_1 :extends
-    UC_4 .d.&gt; UC_1.2 :extends
-    UC_1.2 .&gt; UC_1.2 :extends
-    UC_1.2.1 .u.&gt; UC_1.2 :extends
-    UC_1.2.2 .u.&gt; UC_1.2 :extends
-    UC_1 ..&gt; UC_1.2.2 :extends
-    
-    
-    UC_1.1.1 -u-|&gt; UC_1.1
-    UC_1.1.2 -u-|&gt; UC_1.1
-    UC_1.1.3 -u-|&gt; UC_1.1
-    
-    right footer
-        Аналітичний портал. Модель прецедентів.
-        НТУУ КПІ ім.І.Сікорського
-        Киів-2020
-    end footer
-
-@enduml
-
-**Діаграма прецедентів**
-
-&lt;/center&gt;
-</code></pre>
-<p>яка буде відображена наступним чином</p>
+<h3 id="use-case-1-registeruser---реєстрація-користувача"><a class="header" href="#use-case-1-registeruser---реєстрація-користувача">Use case 1. registerUser - реєстрація користувача</a></h3>
+<p>Користувач заходить в систему вперше, але для того, щоб отримати доступ до інтерфейсу програми їм необхідно зареєструватись. <br>
+Основні кроки:</p>
+<ul>
+<li>User відкриває інтерфейс реєстрації</li>
+<li>Вводить необхідну інформацію (ім'я, прізвище, email, пароль)</li>
+<li>Підтверджує пароль за допомогою повторного вводу</li>
+<li>Натискає кнопку реєстрації</li>
+<li>Отримує лист про успішну реєстрацію на пошті та можливість увійти у свій акаунт</li>
+</ul>
 <center style="
     border-radius:4px;
     border: 1px solid #cfd7e6;
     box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
     padding: 1em;"
     >
-<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBjb250ZW50U3R5bGVUeXBlPSJ0ZXh0L2NzcyIgaGVpZ2h0PSI1NTlweCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgc3R5bGU9IndpZHRoOjExNjRweDtoZWlnaHQ6NTU5cHg7YmFja2dyb3VuZDojRkZGRkZGOyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMTE2NCA1NTkiIHdpZHRoPSIxMTY0cHgiIHpvb21BbmRQYW49Im1hZ25pZnkiPjx0aXRsZT4mbHQ7Zm9udCBzaXplPTE4IGNvbG9yPWJsYWNrJmd0O1VDXzguICYjMTA1NjsmIzEwNzc7JiMxMDc2OyYjMTA3MjsmIzEwNzU7JiMxMDkxOyYjMTA3NDsmIzEwNzI7JiMxMDkwOyYjMTA4MDsgJiMxMDgyOyYjMTA4NjsmIzEwODU7JiMxMDkyOyYjMTExMDsmIzEwNzU7JiMxMDkxOyYjMTA4ODsmIzEwNzI7JiMxMDk0OyYjMTExMDsmIzExMDI7ICYjMTA4NzsmIzEwODY7JiMxMDg4OyYjMTA5MDsmIzEwNzI7JiMxMDgzOyYjMTA5MTs8L3RpdGxlPjxkZWZzLz48Zz48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIyNCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSIxMDkuMDY2NCIgeD0iOTIyLjExMjkiIHk9IjIyLjI3NzMiPlBhY2thZ2U6PC90ZXh0Pjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjI0IiBmb250LXdlaWdodD0iYm9sZCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSIxMTEuNTM5MSIgeD0iMTAzOC44MDgyIiB5PSIyMi4yNzczIj5VQ0RfMy4wPC90ZXh0Pjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE4IiBmb250LXdlaWdodD0iYm9sZCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI0MjQuMjA0MSIgeD0iMzYzLjA3MTYiIHk9IjU1LjY0NTUiPlVDXzguICYjMTA1NjsmIzEwNzc7JiMxMDc2OyYjMTA3MjsmIzEwNzU7JiMxMDkxOyYjMTA3NDsmIzEwNzI7JiMxMDkwOyYjMTA4MDsgJiMxMDgyOyYjMTA4NjsmIzEwODU7JiMxMDkyOyYjMTExMDsmIzEwNzU7JiMxMDkxOyYjMTA4ODsmIzEwNzI7JiMxMDk0OyYjMTExMDsmIzExMDI7ICYjMTA4NzsmIzEwODY7JiMxMDg4OyYjMTA5MDsmIzEwNzI7JiMxMDgzOyYjMTA5MTs8L3RleHQ+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtd2VpZ2h0PSJib2xkIiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjIwNi4zNjcyIiB4PSI0NzEuOTkiIHk9Ijc0Ljc0MjIiPiYjMTA0NDsmIzExMTA7JiMxMDcyOyYjMTA3NTsmIzEwODg7JiMxMDcyOyYjMTA4NDsmIzEwNzI7ICYjMTA4NzsmIzEwODg7JiMxMDc3OyYjMTA5NDsmIzEwNzc7JiMxMDc2OyYjMTA3NzsmIzEwODU7JiMxMDkwOyYjMTExMDsmIzEwNzQ7PC90ZXh0PjwhLS1jbHVzdGVyIFVDRF8xLS0+PGcgaWQ9ImNsdXN0ZXJfVUNEXzEiPjxwYXRoIGQ9Ik0xNjIuNjEsOTUuNTE1NiBMMjEzLjYxNDksOTUuNTE1NiBBMy43NSwzLjc1IDAgMCAxIDIxNi4xMTQ5LDk4LjAxNTYgTDIyMy4xMTQ5LDExNy44MTI1IEw2NDguNjEsMTE3LjgxMjUgQTIuNSwyLjUgMCAwIDEgNjUxLjExLDEyMC4zMTI1IEw2NTEuMTEsMjE5LjE2NTYgQTIuNSwyLjUgMCAwIDEgNjQ4LjYxLDIyMS42NjU2IEwxNjIuNjEsMjIxLjY2NTYgQTIuNSwyLjUgMCAwIDEgMTYwLjExLDIxOS4xNjU2IEwxNjAuMTEsOTguMDE1NiBBMi41LDIuNSAwIDAgMSAxNjIuNjEsOTUuNTE1NiAiIGZpbGw9Im5vbmUiIHN0eWxlPSJzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MS41OyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MS41OyIgeDE9IjE2MC4xMSIgeDI9IjIyMy4xMTQ5IiB5MT0iMTE3LjgxMjUiIHkyPSIxMTcuODEyNSIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iYm9sZCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI1MC4wMDQ5IiB4PSIxNjQuMTEiIHk9IjExMC41MTA3Ij5VQ0RfMTwvdGV4dD48L2c+PGcgaWQ9ImVsZW1fVUNfMSI+PGVsbGlwc2UgY3g9IjUxMy4xMTAyIiBjeT0iMTY4LjA5NjUiIGZpbGw9IiNBQUVFQUEiIHJ4PSIxMjEuNTMwMiIgcnk9IjM3LjU3MDkiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41OyIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iYm9sZCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSIzOC4zODM4IiB4PSI0OTMuOTE4MyIgeT0iMTU0LjY0NjMiPlVDXzE8L3RleHQ+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iMTUxLjE3NjgiIHg9IjQzNS4yOTY3IiB5PSIxNzAuOTQzMiI+JiMxMDU1OyYjMTA3NzsmIzEwODg7JiMxMDc3OyYjMTA3NTsmIzEwODM7JiMxMTAzOyYjMTA4NTsmIzEwOTE7JiMxMDkwOyYjMTA4MDsgJiMxMDg5OyYjMTA4NzsmIzEwODA7JiMxMDg5OyYjMTA4NjsmIzEwODI7PC90ZXh0Pjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjM5Ljg4MDkiIHg9IjQ5My4xNjk3IiB5PSIxODcuMjQwMSI+JiMxMDc5OyYjMTA3NDsmIzExMTA7JiMxMDkwOyYjMTExMDsmIzEwNzQ7PC90ZXh0PjwvZz48ZyBpZD0iZWxlbV9VQ180Ij48ZWxsaXBzZSBjeD0iMjY2LjEwODkiIGN5PSIxNjguMDkyOSIgZmlsbD0iI0FBRUVBQSIgcng9IjkwLjQ1ODkiIHJ5PSIyNi4wNDczIiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjAuNTsiLz48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iMzguMzgzOCIgeD0iMjQ2LjkxNyIgeT0iMTYyLjc5MTEiPlVDXzQ8L3RleHQ+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iMTExLjY4NTUiIHg9IjIxMC4yNjYxIiB5PSIxNzkuMDg4Ij4mIzEwNDI7JiMxMDgwOyYjMTA4MjsmIzEwODM7JiMxMDgwOyYjMTA4MjsmIzEwNzI7JiMxMDkwOyYjMTA4MDsgJiMxMDc5OyYjMTA3NDsmIzExMTA7JiMxMDkwOzwvdGV4dD48L2c+PCEtLWVudGl0eSBVc2VyLS0+PGcgaWQ9ImVsZW1fVXNlciI+PGVsbGlwc2UgY3g9IjcxMi4xMDQ3IiBjeT0iMTM4LjQ0NTYiIGZpbGw9IiNFRUVFQUEiIHJ4PSI4IiByeT0iOCIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7Ii8+PHBhdGggZD0iTTcxMi4xMDQ3LDE0Ni40NDU2IEw3MTIuMTA0NywxNzMuNDQ1NiBNNjk5LjEwNDcsMTU0LjQ0NTYgTDcyNS4xMDQ3LDE1NC40NDU2IE03MTIuMTA0NywxNzMuNDQ1NiBMNjk5LjEwNDcsMTg4LjQ0NTYgTTcxMi4xMDQ3LDE3My40NDU2IEw3MjUuMTA0NywxODguNDQ1NiAiIGZpbGw9Im5vbmUiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41OyIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9Ijg1LjcyOTUiIHg9IjY2OS4yNCIgeT0iMjAyLjk0MDciPiYjMTA1MDsmIzEwODY7JiMxMDg4OyYjMTA4MDsmIzEwODk7JiMxMDkwOyYjMTA5MTsmIzEwNzQ7JiMxMDcyOyYjMTA5NTs8L3RleHQ+PC9nPjxnIGlkPSJlbGVtX1VDXzEuMSI+PGVsbGlwc2UgY3g9IjgwMi4xMSIgY3k9IjMyMi4yMzI5IiBmaWxsPSIjRjFGMUYxIiByeD0iMTE1LjE0IiByeT0iMjYuMDQ3MyIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtd2VpZ2h0PSJib2xkIiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjUzLjQ0MzQiIHg9Ijc3NS4zODgzIiB5PSIzMTYuOTMxMSI+VUNfMS4xPC90ZXh0Pjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjE0Ni41ODk4IiB4PSI3MjguODE1IiB5PSIzMzMuMjI4Ij4mIzEwNDc7JiMxMDcyOyYjMTA4OTsmIzEwOTA7JiMxMDg2OyYjMTA4OTsmIzEwOTE7JiMxMDc0OyYjMTA3MjsmIzEwOTA7JiMxMDgwOyAmIzEwOTI7JiMxMTEwOyYjMTA4MzsmIzExMDA7JiMxMDkwOyYjMTA4ODs8L3RleHQ+PC9nPjxnIGlkPSJlbGVtX1VDXzEuMiI+PGVsbGlwc2UgY3g9IjI0Ny4xMDc4IiBjeT0iMzIyLjIzNjUiIGZpbGw9IiNGMUYxRjEiIHJ4PSIxMzMuMjI3OCIgcnk9IjM3LjU3MDkiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41OyIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iYm9sZCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI1My40NDM0IiB4PSIyMjAuMzg2MSIgeT0iMzA4Ljc4NjMiPlVDXzEuMjwvdGV4dD48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSIxNjcuNzE5NyIgeD0iMTYxLjAyMjgiIHk9IjMyNS4wODMyIj4mIzEwNTU7JiMxMDc3OyYjMTA4ODsmIzEwNzc7JiMxMDc1OyYjMTA4MzsmIzExMDM7JiMxMDg1OyYjMTA5MTsmIzEwOTA7JiMxMDgwOyAmIzEwODQ7JiMxMDc3OyYjMTA5MDsmIzEwNzI7JiMxMDc2OyYjMTA3MjsmIzEwODU7JiMxMTEwOzwvdGV4dD48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSIzNi4wMjU0IiB4PSIyMjkuMDk1MSIgeT0iMzQxLjM4MDEiPiYjMTA3OTsmIzEwNzQ7JiMxMTEwOyYjMTA5MDsmIzEwOTE7PC90ZXh0PjwvZz48ZyBpZD0iZWxlbV9VQ18xLjIuMSI+PGVsbGlwc2UgY3g9IjEwOS4xMDg4IiBjeT0iNDc0LjM3MjkiIGZpbGw9IiNGMUYxRjEiIHJ4PSIxMDMuMTA4OCIgcnk9IjI2LjA0NzMiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41OyIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iYm9sZCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI2OC41MDI5IiB4PSI3NC44NTczIiB5PSI0NjkuMDcxMSI+VUNfMS4yLjE8L3RleHQ+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iMTI5LjU3NTIiIHg9IjQ0LjMyMTIiIHk9IjQ4NS4zNjgiPiYjMTA0NDsmIzEwNzI7JiMxMDkwOyYjMTA4MDsgJiMxMDg2OyYjMTA5NDsmIzExMTA7JiMxMDg1OyYjMTA4MjsmIzEwOTE7ICYjMTA3OTsmIzEwNzQ7JiMxMTEwOyYjMTA5MDsmIzEwOTE7PC90ZXh0PjwvZz48ZyBpZD0iZWxlbV9VQ18xLjIuMiI+PGVsbGlwc2UgY3g9IjM5NC4xMDYxIiBjeT0iNDc0LjM3NjUiIGZpbGw9IiNGMUYxRjEiIHJ4PSIxNDcuMDg2MSIgcnk9IjM3LjU3MDkiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41OyIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iYm9sZCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI2OC41MDI5IiB4PSIzNTkuODU0NyIgeT0iNDYwLjkyNjMiPlVDXzEuMi4yPC90ZXh0Pjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjE4Ny4zMTg0IiB4PSIyOTguMjIxOCIgeT0iNDc3LjIyMzIiPiYjMTA1NTsmIzEwNzc7JiMxMDg4OyYjMTA3NzsmIzEwNzU7JiMxMDgzOyYjMTEwMzsmIzEwODU7JiMxMDkxOyYjMTA5MDsmIzEwODA7ICYjMTExMDsmIzEwODU7JiMxMDkyOyYjMTA4NjsmIzEwODg7JiMxMDg0OyYjMTA3MjsmIzEwOTQ7JiMxMTEwOyYjMTEwMjs8L3RleHQ+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iMTI2LjEwOTQiIHg9IjMzMS4wNTE0IiB5PSI0OTMuNTIwMSI+JiMxMDg3OyYjMTA4ODsmIzEwODY7ICYjMTA3MjsmIzEwNzQ7JiMxMDkwOyYjMTA4NjsmIzEwODg7JiMxMTEwOyYjMTA3NDsgJiMxMDc5OyYjMTA3NDsmIzExMTA7JiMxMDkwOyYjMTA5MTs8L3RleHQ+PC9nPjxnIGlkPSJlbGVtX1VDXzEuMS4xIj48ZWxsaXBzZSBjeD0iNjYyLjExMDciIGN5PSI0NzQuMzc2NSIgZmlsbD0iI0YxRjFGMSIgcng9Ijg2LjE5MDciIHJ5PSIzNy41NzA5IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjAuNTsiLz48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iNjguNTAyOSIgeD0iNjI3Ljg1OTIiIHk9IjQ2MC45MjYzIj5VQ18xLjEuMTwvdGV4dD48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI5NS4zOTU1IiB4PSI2MTQuNDEyOSIgeT0iNDc3LjIyMzIiPiYjMTA0MjsmIzEwODA7JiMxMDgyOyYjMTA4NjsmIzEwODg7JiMxMDgwOyYjMTA4OTsmIzEwOTA7JiMxMDcyOyYjMTA5MDsmIzEwODA7PC90ZXh0Pjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjEwNS42NDk0IiB4PSI2MDkuMjg2IiB5PSI0OTMuNTIwMSI+JiMxMDg3OyYjMTA4NjsmIzEwOTY7JiMxMDkxOyYjMTA4MjsmIzEwODY7JiMxMDc0OyYjMTExMDsgJiMxMDkwOyYjMTA3NzsmIzEwNzU7JiMxMDgwOzwvdGV4dD48L2c+PGcgaWQ9ImVsZW1fVUNfMS4xLjIiPjxlbGxpcHNlIGN4PSI4NjguMTEzNiIgY3k9IjQ3NC4zNzY1IiBmaWxsPSIjRjFGMUYxIiByeD0iODUuMjMzNiIgcnk9IjM3LjU3MDkiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41OyIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iYm9sZCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI2OC41MDI5IiB4PSI4MzMuODYyMiIgeT0iNDYwLjkyNjMiPlVDXzEuMS4yPC90ZXh0Pjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9Ijk1LjM5NTUiIHg9IjgyMC40MTU5IiB5PSI0NzcuMjIzMiI+JiMxMDQyOyYjMTA4MDsmIzEwODI7JiMxMDg2OyYjMTA4ODsmIzEwODA7JiMxMDg5OyYjMTA5MDsmIzEwNzI7JiMxMDkwOyYjMTA4MDs8L3RleHQ+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iMTA0LjAxNTYiIHg9IjgxNi4xMDU4IiB5PSI0OTMuNTIwMSI+JiMxMDg4OyYjMTEwMzsmIzEwNzY7JiMxMDg2OyYjMTA4MjsgJiMxMDg3OyYjMTA4NjsmIzEwOTY7JiMxMDkxOyYjMTA4MjsmIzEwOTE7PC90ZXh0PjwvZz48ZyBpZD0iZWxlbV9VQ18xLjEuMyI+PGVsbGlwc2UgY3g9IjEwNzMuMTEzNiIgY3k9IjQ3NC4zNzY1IiBmaWxsPSIjRjFGMUYxIiByeD0iODUuMjMzNiIgcnk9IjM3LjU3MDkiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41OyIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iYm9sZCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI2OC41MDI5IiB4PSIxMDM4Ljg2MjIiIHk9IjQ2MC45MjYzIj5VQ18xLjEuMzwvdGV4dD48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI5NS4zOTU1IiB4PSIxMDI1LjQxNTkiIHk9IjQ3Ny4yMjMyIj4mIzEwNDI7JiMxMDgwOyYjMTA4MjsmIzEwODY7JiMxMDg4OyYjMTA4MDsmIzEwODk7JiMxMDkwOyYjMTA3MjsmIzEwOTA7JiMxMDgwOzwvdGV4dD48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI1NC41NzgxIiB4PSIxMDQ1LjgyNDYiIHk9IjQ5My41MjAxIj4mIzEwNzI7JiMxMDc0OyYjMTA5MDsmIzEwODY7JiMxMDg4OyYjMTExMDsmIzEwNzQ7PC90ZXh0PjwvZz48IS0tbGluayBVc2VyIHRvIFVDXzEtLT48ZyBpZD0ibGlua19Vc2VyX1VDXzEiPjxwYXRoIGQ9Ik02NjguOSwxNjguMDk1NiBDNjU3LjUyLDE2OC4wOTU2IDY1Mi4xNCwxNjguMDk1NiA2NDAuNzYsMTY4LjA5NTYgIiBmaWxsPSJub25lIiBpZD0iVXNlci10by1VQ18xIiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiLz48cG9seWdvbiBmaWxsPSIjMTgxODE4IiBwb2ludHM9IjYzNC43NiwxNjguMDk1Niw2NDMuNzYsMTcyLjA5NTYsNjM5Ljc2LDE2OC4wOTU2LDY0My43NiwxNjQuMDk1Niw2MzQuNzYsMTY4LjA5NTYiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjwvZz48IS0tcmV2ZXJzZSBsaW5rIFVDXzEgdG8gVUNfMS4xLS0+PGcgaWQ9ImxpbmtfVUNfMV9VQ18xLjEiPjxwYXRoIGQ9Ik01NzguOTk5MiwyMDMuNzgwOCBDNjMzLjk0OTIsMjMyLjcxMDggNzA4LjM3LDI3MS44ODU2IDc1Ny42NCwyOTcuODI1NiAiIGZpbGw9Im5vbmUiIGlkPSJVQ18xLWJhY2t0by1VQ18xLjEiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wO3N0cm9rZS1kYXNoYXJyYXk6Ny4wLDcuMDsiLz48cG9seWdvbiBmaWxsPSIjMTgxODE4IiBwb2ludHM9IjU3My42OSwyMDAuOTg1Niw1NzkuNzkwMywyMDguNzE3OCw1NzguMTE0MywyMDMuMzE0OSw1ODMuNTE3MiwyMDEuNjM4OSw1NzMuNjksMjAwLjk4NTYiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzIiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjUyLjA1MDgiIHg9IjY3NS4xMSIgeT0iMjUwLjczMjUiPmV4dGVuZHM8L3RleHQ+PC9nPjwhLS1yZXZlcnNlIGxpbmsgVUNfMSB0byBVQ18xLjItLT48ZyBpZD0ibGlua19VQ18xX1VDXzEuMiI+PHBhdGggZD0iTTQ1MC44NDE4LDIwNC43MDQ3IEM0MDYuMjYxOCwyMzAuMjA0NyAzNDkuNzgsMjYyLjUwNTYgMzA1LDI4OC4xMjU2ICIgZmlsbD0ibm9uZSIgaWQ9IlVDXzEtYmFja3RvLVVDXzEuMiIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7c3Ryb2tlLWRhc2hhcnJheTo3LjAsNy4wOyIvPjxwb2x5Z29uIGZpbGw9IiMxODE4MTgiIHBvaW50cz0iNDU2LjA1LDIwMS43MjU2LDQ0Ni4yNTE3LDIwMi43MjIyLDQ1MS43MDk5LDIwNC4yMDgyLDQ1MC4yMjM4LDIwOS42NjY0LDQ1Ni4wNSwyMDEuNzI1NiIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iNTIuMDUwOCIgeD0iMzg4LjExIiB5PSIyNTAuNzMyNSI+ZXh0ZW5kczwvdGV4dD48L2c+PCEtLWxpbmsgVUNfNCB0byBVQ18xLjItLT48ZyBpZD0ibGlua19VQ180X1VDXzEuMiI+PHBhdGggZD0iTTI2Mi45MywxOTQuNTU1NiBDMjU5Ljg3LDIxOS4wODU2IDI1NS45NDUsMjUwLjUxMjEgMjUyLjQ2NSwyNzguMzIyMSAiIGZpbGw9Im5vbmUiIGlkPSJVQ180LXRvLVVDXzEuMiIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7c3Ryb2tlLWRhc2hhcnJheTo3LjAsNy4wOyIvPjxwb2x5Z29uIGZpbGw9IiMxODE4MTgiIHBvaW50cz0iMjUxLjcyLDI4NC4yNzU2LDI1Ni44MDY1LDI3NS44NDE5LDI1Mi4zNDA4LDI3OS4zMTQzLDI0OC44Njg1LDI3NC44NDg2LDI1MS43MiwyODQuMjc1NiIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iNTIuMDUwOCIgeD0iMjU5LjExIiB5PSIyNTAuNzMyNSI+ZXh0ZW5kczwvdGV4dD48L2c+PCEtLWxpbmsgVUNfMS4yIHRvIFVDXzEuMi0tPjxnIGlkPSJsaW5rX1VDXzEuMl9VQ18xLjIiPjxwYXRoIGQ9Ik0zNzEuODMsMzA4LjUxNTYgQzM5Ny4xOCwzMTAuMDA1NiA0MTUuMzQsMzE0LjU4NTYgNDE1LjM0LDMyMi4yMzU2IEM0MTUuMzQsMzI5Ljg4NTYgNDAzLjE2OTUsMzM0LjEwMTIgMzc3LjgxOTUsMzM1LjYwMTIgIiBmaWxsPSJub25lIiBpZD0iVUNfMS4yLXRvLVVDXzEuMiIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7c3Ryb2tlLWRhc2hhcnJheTo3LjAsNy4wOyIvPjxwb2x5Z29uIGZpbGw9IiMxODE4MTgiIHBvaW50cz0iMzcxLjgzLDMzNS45NTU2LDM4MS4wNTA2LDMzOS40MTcsMzc2LjgyMTMsMzM1LjY2MDMsMzgwLjU3OCwzMzEuNDMxLDM3MS44MywzMzUuOTU1NiIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iNTIuMDUwOCIgeD0iNDIxLjM0IiB5PSIzMjYuODAyNSI+ZXh0ZW5kczwvdGV4dD48L2c+PCEtLXJldmVyc2UgbGluayBVQ18xLjIgdG8gVUNfMS4yLjEtLT48ZyBpZD0ibGlua19VQ18xLjJfVUNfMS4yLjEiPjxwYXRoIGQ9Ik0yMTAuMzQwMiwzNjMuMjMzNiBDMTg0Ljg0MDIsMzkwLjk4MzYgMTU0LjE0LDQyNC4zNzU2IDEzMS42Nyw0NDguODM1NiAiIGZpbGw9Im5vbmUiIGlkPSJVQ18xLjItYmFja3RvLVVDXzEuMi4xIiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDtzdHJva2UtZGFzaGFycmF5OjcuMCw3LjA7Ii8+PHBvbHlnb24gZmlsbD0iIzE4MTgxOCIgcG9pbnRzPSIyMTQuNCwzNTguODE1NiwyMDUuMzY1MSwzNjIuNzM2MSwyMTEuMDE2OSwzNjIuNDk3MywyMTEuMjU1NywzNjguMTQ5MSwyMTQuNCwzNTguODE1NiIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iNTIuMDUwOCIgeD0iMTg0LjExIiB5PSI0MDIuODcyNSI+ZXh0ZW5kczwvdGV4dD48L2c+PCEtLXJldmVyc2UgbGluayBVQ18xLjIgdG8gVUNfMS4yLjItLT48ZyBpZD0ibGlua19VQ18xLjJfVUNfMS4yLjIiPjxwYXRoIGQ9Ik0yODYuMTQ3MywzNjMuMTAzMSBDMzA5LjQwNzMsMzg2Ljg2MzEgMzM1LjcsNDEzLjcxNTYgMzU5LjAxLDQzNy41MjU2ICIgZmlsbD0ibm9uZSIgaWQ9IlVDXzEuMi1iYWNrdG8tVUNfMS4yLjIiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wO3N0cm9rZS1kYXNoYXJyYXk6Ny4wLDcuMDsiLz48cG9seWdvbiBmaWxsPSIjMTgxODE4IiBwb2ludHM9IjI4MS45NSwzNTguODE1NiwyODUuMzg3NiwzNjguMDQ1MSwyODUuNDQ3NywzNjIuMzg4NiwyOTEuMTA0MywzNjIuNDQ4NywyODEuOTUsMzU4LjgxNTYiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzIiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjUyLjA1MDgiIHg9IjMyNS4xMSIgeT0iNDAyLjg3MjUiPmV4dGVuZHM8L3RleHQ+PC9nPjwhLS1saW5rIFVDXzEgdG8gVUNfMS4yLjItLT48ZyBpZD0ibGlua19VQ18xX1VDXzEuMi4yIj48cGF0aCBkPSJNNTExLjg3LDIwNi4wNTU2IEM1MDkuMzksMjQ1LjU5NTYgNTAxLjk5LDMwOS40MTU2IDQ4MC4xMSwzNTkuODA1NiBDNDY3LjY5LDM4OC4zODU2IDQ1MC41OTE0LDQxMS44MDQ0IDQzMi40MzE0LDQzMi44MzQ0ICIgZmlsbD0ibm9uZSIgaWQ9IlVDXzEtdG8tVUNfMS4yLjIiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wO3N0cm9rZS1kYXNoYXJyYXk6Ny4wLDcuMDsiLz48cG9seWdvbiBmaWxsPSIjMTgxODE4IiBwb2ludHM9IjQyOC41MSw0MzcuMzc1Niw0MzcuNDE5Niw0MzMuMTc4MSw0MzEuNzc3OSw0MzMuNTkxMyw0MzEuMzY0Nyw0MjcuOTQ5Niw0MjguNTEsNDM3LjM3NTYiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzIiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjUyLjA1MDgiIHg9IjUwMi4xMSIgeT0iMzI2LjgwMjUiPmV4dGVuZHM8L3RleHQ+PC9nPjwhLS1yZXZlcnNlIGxpbmsgVUNfMS4xIHRvIFVDXzEuMS4xLS0+PGcgaWQ9ImxpbmtfVUNfMS4xX1VDXzEuMS4xIj48cGF0aCBkPSJNNzY2LjcxMzksMzYxLjE4OTkgQzc0My40OTM5LDM4Ni4wODk5IDcxOS44MSw0MTEuNDk1NiA2OTMuOTEsNDM5LjI3NTYgIiBmaWxsPSJub25lIiBpZD0iVUNfMS4xLWJhY2t0by1VQ18xLjEuMSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PHBvbHlnb24gZmlsbD0ibm9uZSIgcG9pbnRzPSI3NzguOTksMzQ4LjAyNTYsNzYyLjMyNTgsMzU3LjA5NzksNzcxLjEwMiwzNjUuMjgxOSw3NzguOTksMzQ4LjAyNTYiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjwvZz48IS0tcmV2ZXJzZSBsaW5rIFVDXzEuMSB0byBVQ18xLjEuMi0tPjxnIGlkPSJsaW5rX1VDXzEuMV9VQ18xLjEuMiI+PHBhdGggZD0iTTgyMC4zOTkzLDM2NC44NDU3IEM4MzEuMDY5MywzODkuMTM1NyA4NDAuMTMsNDA5LjcxNTYgODUyLjIsNDM3LjE4NTYgIiBmaWxsPSJub25lIiBpZD0iVUNfMS4xLWJhY2t0by1VQ18xLjEuMiIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PHBvbHlnb24gZmlsbD0ibm9uZSIgcG9pbnRzPSI4MTMuMTYsMzQ4LjM2NTYsODE0LjkwNTksMzY3LjI1ODgsODI1Ljg5MjYsMzYyLjQzMjYsODEzLjE2LDM0OC4zNjU2IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiLz48L2c+PCEtLXJldmVyc2UgbGluayBVQ18xLjEgdG8gVUNfMS4xLjMtLT48ZyBpZD0ibGlua19VQ18xLjFfVUNfMS4xLjMiPjxwYXRoIGQ9Ik04NjAuNDk0NiwzNTUuNTc5NSBDOTA4LjE5NDYsMzgyLjAwOTUgOTY5LjczLDQxNi4wOTU2IDEwMjAuOTgsNDQ0LjQ5NTYgIiBmaWxsPSJub25lIiBpZD0iVUNfMS4xLWJhY2t0by1VQ18xLjEuMyIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PHBvbHlnb24gZmlsbD0ibm9uZSIgcG9pbnRzPSI4NDQuNzUsMzQ2Ljg1NTYsODU3LjU4NjcsMzYwLjgyNzcsODYzLjQwMjYsMzUwLjMzMTMsODQ0Ljc1LDM0Ni44NTU2IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiLz48L2c+PHRleHQgZmlsbD0iIzg4ODg4OCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iMjI1Ljg4MzgiIHg9IjkyNC40NjM0IiB5PSI1MjYuMjI5NiI+JiMxMDQwOyYjMTA4NTsmIzEwNzI7JiMxMDgzOyYjMTExMDsmIzEwOTA7JiMxMDgwOyYjMTA5NTsmIzEwODU7JiMxMDgwOyYjMTA4MTsgJiMxMDg3OyYjMTA4NjsmIzEwODg7JiMxMDkwOyYjMTA3MjsmIzEwODM7LiAmIzEwNTI7JiMxMDg2OyYjMTA3NjsmIzEwNzc7JiMxMDgzOyYjMTEwMDsgJiMxMDg3OyYjMTA4ODsmIzEwNzc7JiMxMDk0OyYjMTA3NzsmIzEwNzY7JiMxMDc3OyYjMTA4NTsmIzEwOTA7JiMxMTEwOyYjMTA3NDsuPC90ZXh0Pjx0ZXh0IGZpbGw9IiM4ODg4ODgiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEwIiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjEzMi41NTg2IiB4PSI5NzEuMTI2IiB5PSI1MzcuODcwMyI+JiMxMDUzOyYjMTA1ODsmIzEwNTk7JiMxMDU5OyAmIzEwNTA7JiMxMDU1OyYjMTAzMDsgJiMxMTEwOyYjMTA4NDsuJiMxMDMwOy4mIzEwNTc7JiMxMTEwOyYjMTA4MjsmIzEwODY7JiMxMDg4OyYjMTA4OTsmIzExMDA7JiMxMDgyOyYjMTA4NjsmIzEwNzU7JiMxMDg2OzwvdGV4dD48dGV4dCBmaWxsPSIjODg4ODg4IiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI1MS4zMjgxIiB4PSIxMDExLjc0MTMiIHk9IjU0OS41MTA5Ij4mIzEwNTA7JiMxMDgwOyYjMTExMDsmIzEwNzQ7LTIwMjA8L3RleHQ+PCEtLVNSQz1bWkxOQlJqZjA1RHR0QXd4ODZaU3NnOGVZbVlSelc2eE9MSzg2ZDBHTHVTZXNLak03MTI0WU5LSERMS0xLWWJBYlJOdTBHTDRmaF94MmRKX2djVjRKUWpEd0NSQmR0WmRkdENUU0V5dEpDdV9FQkJEWEVPeWVVNGVkVGppWmpfZFFFWkFBTEJUUmpkREtRdmRyNS1MZE1Dbkp3djFBak5CYi02Y3JlRXNoS3JReDRPQWVSd19malFtcUZGclcwd3pvTjN0R1lCX29iN19tWTJVWXBzQ1VZTkVVNFN6dnBJam44T1BvTXRJbkZIMTN5Tzd1RHd6NTVwdVpOZVgtQWljSjNIQS0wT080MW1PbFVHRzRsNHg1R0I1RUdOOEVYdDRLWTJfVTN5SWlVeFAzRVJ3TGQzbUpGVlp3Nll6cFBCZktTSXM3ellteWZnYUVnRU1iZG9RSUFUQlZIMTh4aGJLdE5Pam9BZGpMbFZJdUxkeFV2ZGplV0h3VTg5dmhnRWNoLTRLRldPOEdNUFdKbDd4bzZFNGhmSnVwMDZaRkQyRmNUcDdfRGY0TUtkczZTOEkwTzdnOUxBaWFCeUdMcUJpSGpnUWRHbmF4TElFX0tyS1FNU3dMNjJRTHpzRGk4cWtlNEtjejJWaldCVWxFQXZ3QkZnTFlRTmVzc2N3cjRiVFNnRDhrZV93Mmotb0ZESTYyaVNmTExvT3pXemw4ZzNmYmJocU9JRmg0Q19KdUdncjFnMDUzWTVfeV9fZzZRUUMwRGtoTTA1ZTZYU3R0Z0JneUx3MFh4Q2p5cDE4THB5dmFMRlRpMGdKZjZjTU54SGZwOVBFYjF5YkEwSV95S19yNkJQQU9YSzNvcmc4a1Bod2lsRm1Edkt2UUhfQ3R3VDF3dlU2d2t4N0xzNjRqYWpPOFJGMUJGUmxCY2NKRXkzMXNVdjBNNlJWRFlRWjNDa094LVJWYnYzcUVBdjFmQVZuaktPa1pfWDBkamtxYl9YM3k0SFRJcGotWGg4LXVuRFVDVnNzQ1BlcHJFcEkzN0IwT0JIYXBMdWlIbF8xdFZrMDdtZ1l6dnU2eWNha0QxbmZfbXZsZzJGSjNiTWhVMlFfWk94VVcxcjNVczNWWU52Nmx6V3kwXS0tPjwvZz48L3N2Zz4=" alt="" /></p>
-<p><strong>Діаграма прецедентів</strong></p>
+<pre><code class="language-plantuml">@startuml
+
+    title
+        &lt;font size=32 color=black&gt;UC_1. Реєстрація користувача
+        &lt;font size=32 color=black&gt;Діаграма прецедентів
+    end title
+
+    skinparam actorStyle awesome
+
+    actor "User" as User #89b1be
+    actor "Система" as System #beb289
+
+    package UCD_1 {
+        usecase "&lt;b&gt;UC_1&lt;/b&gt;\nЗареєструватись" as UC_1 #89be96
+    }
+
+    usecase "&lt;b&gt;UC_1.1&lt;/b&gt;\nВідкрити інтерфейс реєстрації" as UC_1_1
+    usecase "&lt;b&gt;UC_1.2&lt;/b&gt;\nВвести дані" as UC_1_2
+    usecase "&lt;b&gt;UC_1.2.1&lt;/b&gt;\nПідтвердити пароль" as UC_1_2_1
+    usecase "&lt;b&gt;UC_1.2.2&lt;/b&gt;\nПеревірити введені дані" as UC_1_2_2
+    usecase "&lt;b&gt;UC_1.3&lt;/b&gt;\nНадіслати підтвердження на email" as UC_1_3
+    usecase "&lt;b&gt;UC_1.4&lt;/b&gt;\nПідтвердити реєстрацію та увійти у свій аккаунт" as UC_1_4
+
+    UC_1_1 .u.&gt; UC_1 :includes
+    UC_1_2 .u.&gt; UC_1 :includes
+    UC_1_2_1 .u.&gt; UC_1_2 :includes
+    UC_1_2_2 .u.&gt; UC_1_2 :includes
+    UC_1_3 .u.&gt; UC_1_2_2 :includes
+    UC_1_4 .d.&gt; UC_1_3 :includes
+
+    System -&gt; UC_1
+    User -&gt; UC_1_1
+
+    rectangle "Виключні ситуації" {
+        usecase "&lt;b&gt;EX_1&lt;/b&gt;\nНекоректні дані" as EX_1
+        usecase "&lt;b&gt;EX_2&lt;/b&gt;\nПроблеми із сервером" as EX_2
+        usecase "&lt;b&gt;EX_3&lt;/b&gt;\nКористувач уже зареєстрований" as EX_3
+
+        UC_1_2_2 .u.&gt; EX_1 :extends
+        UC_1_4 .u.&gt; EX_3 :extends
+        UC_1_3 .u.&gt; EX_2 :extends
+    }
+
+    right footer
+        Аналітичний портал. Модель прецедентів.
+        НТУУ КПІ ім.І.Сікорського
+        Киів-2024
+    end footer
+
+@enduml
+
+</code></pre>
+</center>
+<h3 id="use-case-2-loginuser---логін-користувача"><a class="header" href="#use-case-2-loginuser---логін-користувача">Use case 2. loginUser - логін користувача</a></h3>
+<p>Користувач вже має свій обліковий запис, але для того, щоб увійти повторно після повного виходу з системи, мають ввести особисті дані для входу й пройти перевірку авторизації <br>
+Основні кроки:</p>
+<ul>
+<li>User відкриває інтерфейс входу в систему</li>
+<li>Вводить email та пароль</li>
+<li>Натискає кнопку "Увійти"</li>
+<li>Система перевіряє облікові дані - точніше наявність облікового запису по введеній пошті й відповідність паролю</li>
+<li>User отримує доступ до свого облікового запису</li>
+</ul>
+<center style="
+    border-radius:4px;
+    border: 1px solid #cfd7e6;
+    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
+    padding: 1em;"
+    >
+<pre><code class="language-plantuml">@startuml
+
+    title
+        &lt;font size=32 color=black&gt;UC_2. Логін користувача
+        &lt;font size=32 color=black&gt;Діаграма прецедентів
+    end title
+
+    skinparam actorStyle awesome
+
+    actor "User" as User #89b1be
+    actor "Система" as System #beb289
+
+    package UCD_2 {
+        usecase "&lt;b&gt;UC_2&lt;/b&gt;\nУвійти в систему" as UC_2 #89be96
+    }
+
+    usecase "&lt;b&gt;UC_2.1&lt;/b&gt;\nВідкрити інтерфейс входу" as UC_2_1
+    usecase "&lt;b&gt;UC_2.2&lt;/b&gt;\nВвести облікові дані" as UC_2_2
+    usecase "&lt;b&gt;UC_2.2.1&lt;/b&gt;\nПеревірити облікові дані" as UC_2_2_1
+    usecase "&lt;b&gt;UC_2.3&lt;/b&gt;\nНадати доступ до акаунту" as UC_2_3
+
+    UC_2_1 .u.&gt; UC_2 :includes
+    UC_2_2 .u.&gt; UC_2 :includes
+    UC_2_2_1 .u.&gt; UC_2_2 :includes
+    UC_2_3 .u.&gt; UC_2_2_1 :includes
+
+    System -&gt; UC_2
+    User -&gt; UC_2_1
+
+    rectangle "Виключні ситуації" {
+        usecase "&lt;b&gt;EX_1&lt;/b&gt;\nНеправильні облікові дані" as EX_1
+        usecase "&lt;b&gt;EX_2&lt;/b&gt;\nЗабутий пароль" as EX_2
+        usecase "&lt;b&gt;EX_3&lt;/b&gt;\nПроблеми із сервером" as EX_3
+        usecase "&lt;b&gt;EX_4&lt;/b&gt;\nКористувач не зареєстрований" as EX_4
+
+        UC_2_2_1 .u.&gt; EX_1 :extends
+        UC_2_2_1 .u.&gt; EX_2 :extends
+        UC_2_2_1 .u.&gt; EX_3 :extends
+        UC_2_2_1 .u.&gt; EX_4 :extends
+    }
+
+    right footer
+        Аналітичний портал. Модель прецедентів.
+        НТУУ КПІ ім.І.Сікорського
+        Киів-2024
+    end footer
+
+@enduml
+
+</code></pre>
+</center>
+<h3 id="use-case-3-edituserprofile---редагування-особистих-даних-користувача"><a class="header" href="#use-case-3-edituserprofile---редагування-особистих-даних-користувача">Use case 3. editUserProfile - редагування особистих даних користувача</a></h3>
+<p>Користувач вже має свій обліковий запис та увійшов у нього. Перейшовши на сторінку свого особистого кабінету, хоче змінити щось із введених параметрів під час реєстрації <br>
+Основні кроки:</p>
+<ul>
+<li>User відкриває сторінку профілю</li>
+<li>Змінює необхідні дані (email або пароль, імʼя або прізвище, комбінації пунктів) + можливо, встановлює аватар</li>
+<li>Натискає кнопку збереження</li>
+<li>Система перевіряє дані та зберігає зміни, якщо такі було внесено</li>
+</ul>
+<center style="
+    border-radius:4px;
+    border: 1px solid #cfd7e6;
+    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
+    padding: 1em;"
+    >
+<pre><code class="language-plantuml">@startuml
+
+    title
+        &lt;font size=32 color=black&gt;UC_3. Редагування особистих даних
+        &lt;font size=32 color=black&gt;Діаграма прецедентів
+    end title
+
+    skinparam actorStyle awesome
+
+    actor "User" as User #89b1be
+    actor "Система" as System #beb289
+
+    package UCD_3 {
+        usecase "&lt;b&gt;UC_3&lt;/b&gt;\nРедагувати особисті дані" as UC_3 #89be96
+    }
+
+    usecase "&lt;b&gt;UC_3.1&lt;/b&gt;\nВідкрити сторінку профілю" as UC_3_1
+    usecase "&lt;b&gt;UC_3.2&lt;/b&gt;\nЗмінити дані профілю" as UC_3_2
+    usecase "&lt;b&gt;UC_3.2.1&lt;/b&gt;\nПеревірити правильність введених даних" as UC_3_2_1
+    usecase "&lt;b&gt;UC_3.3&lt;/b&gt;\nЗберегти зміни" as UC_3_3
+
+    UC_3_1 .u.&gt; UC_3 :includes
+    UC_3_2 .u.&gt; UC_3 :includes
+    UC_3_2_1 .u.&gt; UC_3_2 :includes
+    UC_3_3 .u.&gt; UC_3_2_1 :includes
+
+    System -&gt; UC_3
+    User -&gt; UC_3_1
+
+    rectangle "Виключні ситуації" {
+        usecase "&lt;b&gt;EX_1&lt;/b&gt;\nНеправильний формат облікових даних" as EX_1
+        usecase "&lt;b&gt;EX_2&lt;/b&gt;\nПроблеми із сервером" as EX_2
+        usecase "&lt;b&gt;EX_3&lt;/b&gt;\nДані не змінені" as EX_3
+
+        UC_3_2_1 .u.&gt; EX_1 :extends
+        UC_3_3 .u.&gt; EX_2 :extends
+        UC_3_3 .u.&gt; EX_3 :extends
+    }
+
+    right footer
+        Аналітичний портал. Модель прецедентів.
+        НТУУ КПІ ім.І.Сікорського
+        Киів-2024
+    end footer
+
+@enduml
+
+</code></pre>
 </center>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="Проєктування-бази-даних"><a class="header" href="#Проєктування-бази-даних">Проєктування бази даних</a></h1>
 <p>В рамках проекту розробляється:</p>
