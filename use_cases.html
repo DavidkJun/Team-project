@@ -188,65 +188,7 @@
 <li>Натискає кнопку реєстрації</li>
 <li>Отримує лист про успішну реєстрацію на пошті та можливість увійти у свій акаунт</li>
 </ul>
-<center style="
-    border-radius:4px;
-    border: 1px solid #cfd7e6;
-    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
-    padding: 1em;"
-    >
-<pre><code class="language-plantuml">@startuml
-
-    title
-        &lt;font size=32 color=black&gt;UC_1. Реєстрація користувача
-        &lt;font size=32 color=black&gt;Діаграма прецедентів
-    end title
-
-    skinparam actorStyle awesome
-
-    actor "User" as User #89b1be
-    actor "Система" as System #beb289
-
-    package UCD_1 {
-        usecase "&lt;b&gt;UC_1&lt;/b&gt;\nЗареєструватись" as UC_1 #89be96
-    }
-
-    usecase "&lt;b&gt;UC_1.1&lt;/b&gt;\nВідкрити інтерфейс реєстрації" as UC_1_1
-    usecase "&lt;b&gt;UC_1.2&lt;/b&gt;\nВвести дані" as UC_1_2
-    usecase "&lt;b&gt;UC_1.2.1&lt;/b&gt;\nПідтвердити пароль" as UC_1_2_1
-    usecase "&lt;b&gt;UC_1.2.2&lt;/b&gt;\nПеревірити введені дані" as UC_1_2_2
-    usecase "&lt;b&gt;UC_1.3&lt;/b&gt;\nНадіслати підтвердження на email" as UC_1_3
-    usecase "&lt;b&gt;UC_1.4&lt;/b&gt;\nПідтвердити реєстрацію та увійти у свій аккаунт" as UC_1_4
-
-    UC_1_1 .u.&gt; UC_1 :includes
-    UC_1_2 .u.&gt; UC_1 :includes
-    UC_1_2_1 .u.&gt; UC_1_2 :includes
-    UC_1_2_2 .u.&gt; UC_1_2 :includes
-    UC_1_3 .u.&gt; UC_1_2_2 :includes
-    UC_1_4 .d.&gt; UC_1_3 :includes
-
-    System -&gt; UC_1
-    User -&gt; UC_1_1
-
-    rectangle "Виключні ситуації" {
-        usecase "&lt;b&gt;EX_1&lt;/b&gt;\nНекоректні дані" as EX_1
-        usecase "&lt;b&gt;EX_2&lt;/b&gt;\nПроблеми із сервером" as EX_2
-        usecase "&lt;b&gt;EX_3&lt;/b&gt;\nКористувач уже зареєстрований" as EX_3
-
-        UC_1_2_2 .u.&gt; EX_1 :extends
-        UC_1_4 .u.&gt; EX_3 :extends
-        UC_1_3 .u.&gt; EX_2 :extends
-    }
-
-    right footer
-        Аналітичний портал. Модель прецедентів.
-        НТУУ КПІ ім.І.Сікорського
-        Киів-2024
-    end footer
-
-@enduml
-
-</code></pre>
-</center>
+<p><img src="https://www.plantuml.com/plantuml/png/ZLNXIXj14FxlKmpwssjp5ueM5S7s2KJeZu9Sucg3bqJkBhIs58oM-ATeAN92gLZh2roZgJ5gV8NPD-gtkzucrKkj4hAxyyqttyxCJkQZs0_ZHZKOYojn8CRexczcjLwBAQgy5xEUI-LwK0zdIu5VNfzRMbWkECG_k2CFP5DkoorEPKicSf-untrik_fuXzimx7Bw7vny81DE-KnnyJMdnBTOTcIBEtoEpmtu4cvh9b5R8QDLRwFrIct33_qg-UMu7Yx6cu4W_ws8wbM3CESqlXI9S9pyYDI29gQcIuMI60RmYL6EU92WeOkRKIogD54I9NTgsj1jGB2_9cXfuSLoWJxOspKYKVOZGUCp9PsZcIUbkTSrFaGIjWQvkalBjWxrsUW1MEiHqyyqsqS4oY5qCiglCa5MUZhJ829iRvHii7-2-4lP9DZkb-VG1bikvFEx6J-tuTtKt0YKWZqPEBiZdAsyOoKFpcsb2Fv69D_gHFJvQd1ja8tKOjKSQveEjsLYRmpkjcsD94_aA9dU7UiHFCx1sEGhw382x-d-hTX1kq_uIabK_KemYE3bynV_bOIyikmHB2cfle3BfO7j48JfFK5d3_yf02Zo87xHD8cf9paDPqwlwNcbLWuQAo8QcDr7pDPVx_8XxcCGRnYG3ocIiv91l260GcHFRTBOZHCUQdQ08tqMYdBirzO2f1nzskKU-cbFxkesGCwwUl3OXiz_dIzVsTTvn1qpjDItt7xOJGexYiHsgExhNtob9uT-ZnSGeokF-clhTSRcZcBBElFRmnbAMA0RYI-6XudcRIkjoCDbnk-PF3qi7MmeltWNOu16VsEA5k6DG7WMuLh4yAmAAsjlObgjrsCHMa_-0caf2fJeURThX1BVgXlY22Q7-3ltzKF6N1Wnzfq1un7_v5C-9MJfc5i4wxN3BOTFiD9rL5DLhVYC-zODwAuYcdIVkiNiHoHJEuyrVl_-0000" alt="UC_1. Реєстрація користувача - Діаграма прецедентів" /></p>
 <h3 id="use-case-2-loginuser---логін-користувача"><a class="header" href="#use-case-2-loginuser---логін-користувача">Use case 2. loginUser - логін користувача</a></h3>
 <p>Користувач вже має свій обліковий запис, але для того, щоб увійти повторно після повного виходу з системи, мають ввести особисті дані для входу й пройти перевірку авторизації <br>
 Основні кроки:</p>
@@ -257,63 +199,7 @@
 <li>Система перевіряє облікові дані - точніше наявність облікового запису по введеній пошті й відповідність паролю</li>
 <li>User отримує доступ до свого облікового запису</li>
 </ul>
-<center style="
-    border-radius:4px;
-    border: 1px solid #cfd7e6;
-    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
-    padding: 1em;"
-    >
-<pre><code class="language-plantuml">@startuml
-
-    title
-        &lt;font size=32 color=black&gt;UC_2. Логін користувача
-        &lt;font size=32 color=black&gt;Діаграма прецедентів
-    end title
-
-    skinparam actorStyle awesome
-
-    actor "User" as User #89b1be
-    actor "Система" as System #beb289
-
-    package UCD_2 {
-        usecase "&lt;b&gt;UC_2&lt;/b&gt;\nУвійти в систему" as UC_2 #89be96
-    }
-
-    usecase "&lt;b&gt;UC_2.1&lt;/b&gt;\nВідкрити інтерфейс входу" as UC_2_1
-    usecase "&lt;b&gt;UC_2.2&lt;/b&gt;\nВвести облікові дані" as UC_2_2
-    usecase "&lt;b&gt;UC_2.2.1&lt;/b&gt;\nПеревірити облікові дані" as UC_2_2_1
-    usecase "&lt;b&gt;UC_2.3&lt;/b&gt;\nНадати доступ до акаунту" as UC_2_3
-
-    UC_2_1 .u.&gt; UC_2 :includes
-    UC_2_2 .u.&gt; UC_2 :includes
-    UC_2_2_1 .u.&gt; UC_2_2 :includes
-    UC_2_3 .u.&gt; UC_2_2_1 :includes
-
-    System -&gt; UC_2
-    User -&gt; UC_2_1
-
-    rectangle "Виключні ситуації" {
-        usecase "&lt;b&gt;EX_1&lt;/b&gt;\nНеправильні облікові дані" as EX_1
-        usecase "&lt;b&gt;EX_2&lt;/b&gt;\nЗабутий пароль" as EX_2
-        usecase "&lt;b&gt;EX_3&lt;/b&gt;\nПроблеми із сервером" as EX_3
-        usecase "&lt;b&gt;EX_4&lt;/b&gt;\nКористувач не зареєстрований" as EX_4
-
-        UC_2_2_1 .u.&gt; EX_1 :extends
-        UC_2_2_1 .u.&gt; EX_2 :extends
-        UC_2_2_1 .u.&gt; EX_3 :extends
-        UC_2_2_1 .u.&gt; EX_4 :extends
-    }
-
-    right footer
-        Аналітичний портал. Модель прецедентів.
-        НТУУ КПІ ім.І.Сікорського
-        Киів-2024
-    end footer
-
-@enduml
-
-</code></pre>
-</center>
+<p><img src="https://www.plantuml.com/plantuml/png/ZPNHIXjF5CRlVOf3l7R__-o6eaL5i7q24NfH2BjnjC5DLdOdjBOKagQDDwMK8WfjHQmli4Q3CTNu2cVUgD_CP9E0BaPGPlTyvpVVd7DsN4ka7yj6BPoJLHcAEHhzB6z7TKb9zRrOyLogH64KhmIXNzbTtLmlkmxnBnxofJhYE-813rMJ-wgbFgasTpbL1vpEGE93vAUWDF7tbbFYUonxgiCzliBl7NX7t3KaKTyYwz0y9hlL-fuV-pNoApAAD-H-ACX_AvAePXNsFHKs4n4No4z8BsX-SIae1c9Qm6VMEVUq1IFTs4-agD5y809tSSdYzc3Otn6qkVwYxDA7yUaQYQZuYQ32Sc0gi_nViFgwpkVSXVKROFl4NLAjoIQgRVr0RFo8fMU6zX4RFG9qYYFa3m2lU60ghR6wzfgeckepk3UgHTZq2zfoDRL5kVWurSset0MYPOX8lU2_uAAXsZzXlnIR74reRWvjxF8KDFHGfskdCtFpV7eZxWaoa6LuM0n7mtPl7WZ10O9jNP7fmtksfhOGv3ISLLltvzLw9MniYMGITfy8J-S_Bl6c1P1F95gJJTM2LTWqpEJe1HAiB1OLwTTtGjG0pUdp09NxfWvqkSmOcMEdgeFw7XTo1l7bgt9nNBUU-QfIzBaFr5SDUg8ZEZsFcytDCVGNggtxmJV4zx3K10iRP0Wt3-5beu8CuyDyUcQWht54Cq0OIXEzpMXU7gqqelryU0aHtt6F-5fx0-_Gn43LKOHWFAENREqVTXinD5AyaxX_adoDEuF6cq5JcjQChuIuklD6qdOKIH6FS_axZf3g9keUw079Ee4wu1L23l5l7fgh57t9kLsT2V64__0vdnDgUSeTGlJMuOx3PtPGW6rXVh3YInwEqw3kQz22-xzRokxgpEqQrlZdyWy0" alt="UC_2. Логін користувача - Діаграма прецедентів" /></p>
 <h3 id="use-case-3-edituserprofile---редагування-особистих-даних-користувача"><a class="header" href="#use-case-3-edituserprofile---редагування-особистих-даних-користувача">Use case 3. editUserProfile - редагування особистих даних користувача</a></h3>
 <p>Користувач вже має свій обліковий запис та увійшов у нього. Перейшовши на сторінку свого особистого кабінету, хоче змінити щось із введених параметрів під час реєстрації <br>
 Основні кроки:</p>
@@ -323,61 +209,7 @@
 <li>Натискає кнопку збереження</li>
 <li>Система перевіряє дані та зберігає зміни, якщо такі було внесено</li>
 </ul>
-<center style="
-    border-radius:4px;
-    border: 1px solid #cfd7e6;
-    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
-    padding: 1em;"
-    >
-<pre><code class="language-plantuml">@startuml
-
-    title
-        &lt;font size=32 color=black&gt;UC_3. Редагування особистих даних
-        &lt;font size=32 color=black&gt;Діаграма прецедентів
-    end title
-
-    skinparam actorStyle awesome
-
-    actor "User" as User #89b1be
-    actor "Система" as System #beb289
-
-    package UCD_3 {
-        usecase "&lt;b&gt;UC_3&lt;/b&gt;\nРедагувати особисті дані" as UC_3 #89be96
-    }
-
-    usecase "&lt;b&gt;UC_3.1&lt;/b&gt;\nВідкрити сторінку профілю" as UC_3_1
-    usecase "&lt;b&gt;UC_3.2&lt;/b&gt;\nЗмінити дані профілю" as UC_3_2
-    usecase "&lt;b&gt;UC_3.2.1&lt;/b&gt;\nПеревірити правильність введених даних" as UC_3_2_1
-    usecase "&lt;b&gt;UC_3.3&lt;/b&gt;\nЗберегти зміни" as UC_3_3
-
-    UC_3_1 .u.&gt; UC_3 :includes
-    UC_3_2 .u.&gt; UC_3 :includes
-    UC_3_2_1 .u.&gt; UC_3_2 :includes
-    UC_3_3 .u.&gt; UC_3_2_1 :includes
-
-    System -&gt; UC_3
-    User -&gt; UC_3_1
-
-    rectangle "Виключні ситуації" {
-        usecase "&lt;b&gt;EX_1&lt;/b&gt;\nНеправильний формат облікових даних" as EX_1
-        usecase "&lt;b&gt;EX_2&lt;/b&gt;\nПроблеми із сервером" as EX_2
-        usecase "&lt;b&gt;EX_3&lt;/b&gt;\nДані не змінені" as EX_3
-
-        UC_3_2_1 .u.&gt; EX_1 :extends
-        UC_3_3 .u.&gt; EX_2 :extends
-        UC_3_3 .u.&gt; EX_3 :extends
-    }
-
-    right footer
-        Аналітичний портал. Модель прецедентів.
-        НТУУ КПІ ім.І.Сікорського
-        Киів-2024
-    end footer
-
-@enduml
-
-</code></pre>
-</center>
+<p><img src="https://www.plantuml.com/plantuml/png/ZLJHJjjA47tdAqRX6T-BNLLG0KAY_GA4r8TAaMqM6k7OoDwefLKb0ZIyeBP2A4XL4QNyG0YrI249lp3xHvsTh6sQng9vi2UpPy_CdZFUvKIwiMpKWobPau6O0lDRs8X22KdjdLXqRF2Z88eNlS3rjvRMLggE1VWTK_o97RnM-zYbzm07wZFWK3LnY5VOKqsrHy-FmAY13l-174zKcqbtwTd73k0zXQbgSRMKQkmHeCjC8bo7KTFyDzcgXTjkxDR1zMKKhygTG83xHYHHtI0u3vMrHCGLS1FG0KpFpNkpddW8m0lJVgfROEZgJY957QOzuTbpyoEwRMhOtHImjlAywi3x_7IDHFXk8g2ouB5O2_zvIw_2SS6qEcDogROHIxMvgDxC_Odvfyp-WGfFA63DcXB7gaq4jwHOZ-arAPNOfVI0qlki9YKEA76dFkL5ghEJUMt3Uufzfc3MlCTIDhk4BU_p75FjAdPLE--LoJgaJ8_8ZZG_It84bEfcxeyDr8EIPKTmyYDScQBNet8tsPaA4eVbDOg0rR2ME8PdjT0F6kiYAPRjHvQB_GoU074OKC0B26FCmCsC49pYSUK4EyQvMFZI3JS3EZ4UatItsWbroFQeffQMfgsZMgJcQQLaHb-yh6R6d64wxWEzVu4wq6E4VJssm0DxH-BTKjITP8bcB2jbPpD0V4p4NraFYE-6McQJo6zUxMTiTXbRPkz9Df83J0jlKvtBE8oxVtj4QoI_U2lfGad-n3WvmduKuUI8XzzgNDjyBM4ZYgI8yvtuXPhhQ0tvZZmqAkEzLfbIj6G1ViCXJptPK78DMWNZ6Vx0Ixm4_8hdsD9gzYriMNZ1FcdQfZfYnwvnc6yZT4yJpTZ_sq_oIzLqkqnnenxy1W00" alt="UC_3. Редагування особистих даних - Діаграма прецедентів" /></p>
 
                     </main>
 
