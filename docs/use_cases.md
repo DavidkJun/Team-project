@@ -1,12 +1,28 @@
 # Розроблення функціональних вимог до системи
 
-## Модель прецедентів
+## Діаграма прецедентів
 
-В цьому файлі необхідно перелічити всі документи, розроблені в проекті та дати посилання на них.
+![](https://www.plantuml.com/plantuml/png/ZP6zIiDG5CVtFCMXpXridQKYEEaYk0boRIunaDn0xWrISAYjuAY3LEWcla0C3QRQrbVutpVoDBUnT7F89UVZ_piVfwUDI4qMHvxecoIb5gPOsI4gUsz7Tem2kNriaT1qeMLAUr4Ot9ZhA9D_-S-OOM4dMDf9hHcoOhHcrAeZFmxLHZQGKPJSUbwcPLzeIQqrybm6eJOolLHuHSxgqhuupgRw21LXXGzySv4l_YjGOKxuH8wVTP-kk-Eh_LtmQHA4YgdlA5WuTvpYVwZE5dKc_L1GFr56AaDwmBt6J7rp6qA91NBYfyICeNcxvYxh2Bzst22xM-H9aiOK2oK26JEKQLEKpRnOikw9x4Dz1eRpLpMG0y-hpz3EseTkv1spip5zPtOzjtqEtx63Gus34nok9vNFn_y5)
 
-_Модель прецедентів повинна містити загальні оглядові діаграми та специфікації прецедентів._
+##  Діаграма можливостей користувача
 
-Вбудовування зображень діаграм здійснюється з використанням сервісу [plantuml.com](https://plantuml.com/).
+**Користувач** може виконувати такі основні дії:
+1. **Реєстрація облікового запису** – користувач створює новий акаунт для доступу до системи.
+2. **Вхід у систему** – після реєстрації користувач може входити у свій акаунт, використовуючи облікові дані.
+3. **Взаємодія з медіа-контентом** – після входу користувач отримує доступ до системи медіа-контенту та може переглядати, завантажувати або взаємодіяти з ним
+
+![](https://www.plantuml.com/plantuml/png/ZT2nIiH040RWVfzYEEiKdhqSs6eZs0aIaoK6SXl8RWgxyomi1JbEiFK5OZ2OqpE-mZzlvEoU8kbibltPdM-6cLaNLwwU5qh5YIihck090o_Gymql-HOj6hwRK6pfpEgAzeeyktANHQsLggrEOgjfubzETPPRfwjpWqSq0dIy2iJY1rcY9mnumGUlyIwt5ZqsX3Sq-FBjTasEBlR7y76PvKRKPxHIkDavxV-ewHzrejCyfgGqJXj7zbfcdOlwu8juXQqehxpcUr58KkSJcYZmdzAq2-U0xQzze5JOI9H6Xs7iSPoEe_oUQPFwHNy3)
+
+##  Діаграма можливостей адміністратора
+
+**Адміністратор** має можливість виконувати наступні дії:
+1. **Додавання форми** – адміністратор може додавати нові форми для взаємодії користувачів з системою.
+2. **Редагування форми** – адміністратор має можливість редагувати існуючі форми, змінюючи їхній вміст або параметри.
+3. **Видалення форми** – адміністратор може видаляти форми, які більше не використовуються або стали застарілими.
+
+
+
+![](https://www.plantuml.com/plantuml/png/XT8nJiCm50RWtQTuCdDx00PK169ZP6CnpLEfP3ieTWHieR2363emmGsYqagLQ3d3UpV2IL1SMQewH1dy_v_-M1avhmfV6Ys46lky04bljAGDpsdBStxY6LTKyun-kPAW79ncPchXI4ydj_uHjSxlXIWTZfL3a1TvOS0egoPeqFfhIn-quegVQK4rRGFv2lpIMBIXEZphrcngbtqhScS5Ae_DQP2-meX5MrsbKgV4zF-y6rrYnAxkieXz1cGP5dodqtR1hh4NF4UDFVXEwnRysRUkIwUOwAvpa0rEqblO-PnXEKoFuHWaFdYqcPEY7teusiyu71MZy6x-Z3y0)
 
 ### Use case 1. registerUser - реєстрація користувача
 
@@ -45,3 +61,4 @@ _Модель прецедентів повинна містити загаль�
 - Система перевіряє дані та зберігає зміни, якщо такі було внесено
 
 ![UC_3. Редагування особистих даних - Діаграма прецедентів](https://www.plantuml.com/plantuml/png/ZLJHJjjA47tdAqRX6T-BNLLG0KAY_GA4r8TAaMqM6k7OoDwefLKb0ZIyeBP2A4XL4QNyG0YrI249lp3xHvsTh6sQng9vi2UpPy_CdZFUvKIwiMpKWobPau6O0lDRs8X22KdjdLXqRF2Z88eNlS3rjvRMLggE1VWTK_o97RnM-zYbzm07wZFWK3LnY5VOKqsrHy-FmAY13l-174zKcqbtwTd73k0zXQbgSRMKQkmHeCjC8bo7KTFyDzcgXTjkxDR1zMKKhygTG83xHYHHtI0u3vMrHCGLS1FG0KpFpNkpddW8m0lJVgfROEZgJY957QOzuTbpyoEwRMhOtHImjlAywi3x_7IDHFXk8g2ouB5O2_zvIw_2SS6qEcDogROHIxMvgDxC_Odvfyp-WGfFA63DcXB7gaq4jwHOZ-arAPNOfVI0qlki9YKEA76dFkL5ghEJUMt3Uufzfc3MlCTIDhk4BU_p75FjAdPLE--LoJgaJ8_8ZZG_It84bEfcxeyDr8EIPKTmyYDScQBNet8tsPaA4eVbDOg0rR2ME8PdjT0F6kiYAPRjHvQB_GoU074OKC0B26FCmCsC49pYSUK4EyQvMFZI3JS3EZ4UatItsWbroFQeffQMfgsZMgJcQQLaHb-yh6R6d64wxWEzVu4wq6E4VJssm0DxH-BTKjITP8bcB2jbPpD0V4p4NraFYE-6McQJo6zUxMTiTXbRPkz9Df83J0jlKvtBE8oxVtj4QoI_U2lfGad-n3WvmduKuUI8XzzgNDjyBM4ZYgI8yvtuXPhhQ0tvZZmqAkEzLfbIj6G1ViCXJptPK78DMWNZ6Vx0Ixm4_8hdsD9gzYriMNZ1FcdQfZfYnwvnc6yZT4yJpTZ_sq_oIzLqkqnnenxy1W00)
+
