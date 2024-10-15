@@ -1,0 +1,48 @@
+@startuml
+
+    title
+        <font size=32 color=black>UC_2. Логін користувача
+        <font size=32 color=black>Діаграма прецедентів
+    end title
+
+    skinparam actorStyle awesome
+
+    actor "User" as User #89b1be
+    actor "Система" as System #beb289
+
+    package UCD_2 {
+        usecase "<b>UC_2</b>\nУвійти в систему" as UC_2 #89be96
+    }
+
+    usecase "<b>UC_2.1</b>\nВідкрити інтерфейс входу" as UC_2_1
+    usecase "<b>UC_2.2</b>\nВвести облікові дані" as UC_2_2
+    usecase "<b>UC_2.2.1</b>\nПеревірити облікові дані" as UC_2_2_1
+    usecase "<b>UC_2.3</b>\nНадати доступ до акаунту" as UC_2_3
+
+    UC_2_1 .u.> UC_2 :includes
+    UC_2_2 .u.> UC_2 :includes
+    UC_2_2_1 .u.> UC_2_2 :includes
+    UC_2_3 .u.> UC_2_2_1 :includes
+
+    System -> UC_2
+    User -> UC_2_1
+
+    rectangle "Виключні ситуації" {
+        usecase "<b>EX_1</b>\nНеправильні облікові дані" as EX_1
+        usecase "<b>EX_2</b>\nЗабутий пароль" as EX_2
+        usecase "<b>EX_3</b>\nПроблеми із сервером" as EX_3
+        usecase "<b>EX_4</b>\nКористувач не зареєстрований" as EX_4
+
+        UC_2_2_1 .u.> EX_1 :extends
+        UC_2_2_1 .u.> EX_2 :extends
+        UC_2_2_1 .u.> EX_3 :extends
+        UC_2_2_1 .u.> EX_4 :extends
+    }
+
+    right footer
+        Аналітичний портал. Модель прецедентів.
+        НТУУ КПІ ім.І.Сікорського
+        Киів-2024
+    end footer
+
+@enduml
