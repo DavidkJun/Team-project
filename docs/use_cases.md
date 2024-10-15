@@ -1,154 +1,27 @@
 # Розроблення функціональних вимог до системи
 
-## Модель прецедентів
+## Діаграма прецедентів
 
-В цьому файлі необхідно перелічити всі документи, розроблені в проекті та дати посилання на них.
-
-*Модель прецедентів повинна містити загальні оглядові діаграми та специфікації прецедентів.*
+![](https://www.plantuml.com/plantuml/png/ZP6zIiDG5CVtFCMXpXridQKYEEaYk0boRIunaDn0xWrISAYjuAY3LEWcla0C3QRQrbVutpVoDBUnT7F89UVZ_piVfwUDI4qMHvxecoIb5gPOsI4gUsz7Tem2kNriaT1qeMLAUr4Ot9ZhA9D_-S-OOM4dMDf9hHcoOhHcrAeZFmxLHZQGKPJSUbwcPLzeIQqrybm6eJOolLHuHSxgqhuupgRw21LXXGzySv4l_YjGOKxuH8wVTP-kk-Eh_LtmQHA4YgdlA5WuTvpYVwZE5dKc_L1GFr56AaDwmBt6J7rp6qA91NBYfyICeNcxvYxh2Bzst22xM-H9aiOK2oK26JEKQLEKpRnOikw9x4Dz1eRpLpMG0y-hpz3EseTkv1spip5zPtOzjtqEtx63Gus34nok9vNFn_y5)
 
 
 
-Вбудовування зображень діаграм здійснюється з використанням сервісу [plantuml.com](https://plantuml.com/). 
+##  Діаграма можливостей користувача
 
-В markdown-файлі використовується опис діаграми
+**Користувач** може виконувати такі основні дії:
+1. **Реєстрація облікового запису** – користувач створює новий акаунт для доступу до системи.
+2. **Вхід у систему** – після реєстрації користувач може входити у свій акаунт, використовуючи облікові дані.
+3. **Взаємодія з медіа-контентом** – після входу користувач отримує доступ до системи медіа-контенту та може переглядати, завантажувати або взаємодіяти з ним
 
-```md
+![](https://www.plantuml.com/plantuml/png/ZT2nIiH040RWVfzYEEiKdhqSs6eZs0aIaoK6SXl8RWgxyomi1JbEiFK5OZ2OqpE-mZzlvEoU8kbibltPdM-6cLaNLwwU5qh5YIihck090o_Gymql-HOj6hwRK6pfpEgAzeeyktANHQsLggrEOgjfubzETPPRfwjpWqSq0dIy2iJY1rcY9mnumGUlyIwt5ZqsX3Sq-FBjTasEBlR7y76PvKRKPxHIkDavxV-ewHzrejCyfgGqJXj7zbfcdOlwu8juXQqehxpcUr58KkSJcYZmdzAq2-U0xQzze5JOI9H6Xs7iSPoEe_oUQPFwHNy3)
 
-<center style="
-    border-radius:4px;
-    border: 1px solid #cfd7e6;
-    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
-    padding: 1em;"
->
+##  Діаграма можливостей адміністратора
 
-@startuml
-
-    right header
-        <font size=24 color=black>Package: <b>UCD_3.0
-    end header
-
-    title
-        <font size=18 color=black>UC_8. Редагувати конфігурацію порталу
-        <font size=16 color=black>Діаграма прецедентів
-    end title
+**Адміністратор** має можливість виконувати наступні дії:
+1. **Додавання форми** – адміністратор може додавати нові форми для взаємодії користувачів з системою.
+2. **Редагування форми** – адміністратор має можливість редагувати існуючі форми, змінюючи їхній вміст або параметри.
+3. **Видалення форми** – адміністратор може видаляти форми, які більше не використовуються або стали застарілими.
 
 
-    actor "Користувач" as User #eeeeaa
-    
-    package UCD_1{
-        usecase "<b>UC_1</b>\nПереглянути список \nзвітів" as UC_1 #aaeeaa
-    }
-    
-    usecase "<b>UC_1.1</b>\nЗастосувати фільтр" as UC_1.1
-    usecase "<b>UC_1.2</b>\nПереглянути метадані \nзвіту" as UC_1.2  
-    usecase "<b>UC_1.2.1</b>\nДати оцінку звіту" as UC_1.2.1  
-    usecase "<b>UC_1.2.2</b>\nПереглянути інформацію \nпро авторів звіту" as UC_1.2.2
-    
-    package UCD_1 {
-        usecase "<b>UC_4</b>\nВикликати звіт" as UC_4 #aaeeaa
-    }
-    
-    usecase "<b>UC_1.1.1</b>\n Використати \nпошукові теги" as UC_1.1.1  
-    usecase "<b>UC_1.1.2</b>\n Використати \nрядок пошуку" as UC_1.1.2
-    usecase "<b>UC_1.1.3</b>\n Використати \nавторів" as UC_1.1.3  
-    
-    
-    
-    User -> UC_1
-    UC_1.1 .u.> UC_1 :extends
-    UC_1.2 .u.> UC_1 :extends
-    UC_4 .d.> UC_1.2 :extends
-    UC_1.2 .> UC_1.2 :extends
-    UC_1.2.1 .u.> UC_1.2 :extends
-    UC_1.2.2 .u.> UC_1.2 :extends
-    UC_1 ..> UC_1.2.2 :extends
-    
-    
-    UC_1.1.1 -u-|> UC_1.1
-    UC_1.1.2 -u-|> UC_1.1
-    UC_1.1.3 -u-|> UC_1.1
-    
-    right footer
-        Аналітичний портал. Модель прецедентів.
-        НТУУ КПІ ім.І.Сікорського
-        Киів-2020
-    end footer
 
-@enduml
-
-**Діаграма прецедентів**
-
-</center>
-```
-
-яка буде відображена наступним чином
-
-<center style="
-    border-radius:4px;
-    border: 1px solid #cfd7e6;
-    box-shadow: 0 1px 3px 0 rgba(89,105,129,.05), 0 1px 1px 0 rgba(0,0,0,.025);
-    padding: 1em;"
-    >
-
-```plantuml
-@startuml
-
-    right header
-        <font size=24 color=black>Package: <b>UCD_3.0
-    end header
-
-    title
-        <font size=18 color=black>UC_8. Редагувати конфігурацію порталу
-        <font size=16 color=black>Діаграма прецедентів
-    end title
-
-
-    actor "Користувач" as User #eeeeaa
-    
-    package UCD_1{
-        usecase "<b>UC_1</b>\nПереглянути список \nзвітів" as UC_1 #aaeeaa
-    }
-    
-    usecase "<b>UC_1.1</b>\nЗастосувати фільтр" as UC_1.1
-    usecase "<b>UC_1.2</b>\nПереглянути метадані \nзвіту" as UC_1.2  
-    usecase "<b>UC_1.2.1</b>\nДати оцінку звіту" as UC_1.2.1  
-    usecase "<b>UC_1.2.2</b>\nПереглянути інформацію \nпро авторів звіту" as UC_1.2.2
-    
-    package UCD_1 {
-        usecase "<b>UC_4</b>\nВикликати звіт" as UC_4 #aaeeaa
-    }
-    
-    usecase "<b>UC_1.1.1</b>\n Використати \nпошукові теги" as UC_1.1.1  
-    usecase "<b>UC_1.1.2</b>\n Використати \nрядок пошуку" as UC_1.1.2
-    usecase "<b>UC_1.1.3</b>\n Використати \nавторів" as UC_1.1.3  
-    
-    
-    
-    User -> UC_1
-    UC_1.1 .u.> UC_1 :extends
-    UC_1.2 .u.> UC_1 :extends
-    UC_4 .d.> UC_1.2 :extends
-    UC_1.2 .> UC_1.2 :extends
-    UC_1.2.1 .u.> UC_1.2 :extends
-    UC_1.2.2 .u.> UC_1.2 :extends
-    UC_1 ..> UC_1.2.2 :extends
-    
-    
-    UC_1.1.1 -u-|> UC_1.1
-    UC_1.1.2 -u-|> UC_1.1
-    UC_1.1.3 -u-|> UC_1.1
-    
-    right footer
-        Аналітичний портал. Модель прецедентів.
-        НТУУ КПІ ім.І.Сікорського
-        Киів-2020
-    end footer
-
-@enduml
-```
-
-
-**Діаграма прецедентів**
-
-</center>
-
+![](https://www.plantuml.com/plantuml/png/XT8nJiCm50RWtQTuCdDx00PK169ZP6CnpLEfP3ieTWHieR2363emmGsYqagLQ3d3UpV2IL1SMQewH1dy_v_-M1avhmfV6Ys46lky04bljAGDpsdBStxY6LTKyun-kPAW79ncPchXI4ydj_uHjSxlXIWTZfL3a1TvOS0egoPeqFfhIn-quegVQK4rRGFv2lpIMBIXEZphrcngbtqhScS5Ae_DQP2-meX5MrsbKgV4zF-y6rrYnAxkieXz1cGP5dodqtR1hh4NF4UDFVXEwnRysRUkIwUOwAvpa0rEqblO-PnXEKoFuHWaFdYqcPEY7teusiyu71MZy6x-Z3y0)
