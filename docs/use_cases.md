@@ -64,7 +64,7 @@
 
 ### Use case 5. editForm - Редагування існуючої форми
 
-Користувач вже має свій обліковий запис та увійшов у нього. Він вже має створену форму, що потребує змін. Обравши форму для редагування, адміністратор хоче внести зміни <br>
+Адміністратор має створену форму, яка потребує змін. Обравши форму для редагування, адміністратор хоче внести зміни <br>
 Основні кроки:
 
 - Admin відкриває список своїх існуючих форм.
@@ -72,5 +72,16 @@
 - Вносить необхідні зміни (додає/видаляє поля, змінює форматування або стилі).
 - Зберігає оновлену форму.
 
-![UC_5. Редагування існуючої форми - Діаграма прецедентів](https://www.plantuml.com/plantuml/png/bPJDYXD14CVl_HH5lBe1atYH9Qo8Ul4gU11ac3JhG38BCnrGHDZPMTURWiW4FFZn1hDPuuuJCtc5gZUogeSqqoW6Svdkglh_ghggo55gWiJCPrDb8ZFLyFZUizjzmA-umkzOuXNbkEJl1ZVq7gYWZ0yvlQEtsD02w9m_f_WBgwSnVgH257mlsL82RlcueWkBMh7kZ0EMIWMXEKcWTtSoY-8U12a4SjgPyHjMbD4PAnXY_UdBrEYPKlDKXq6gEUQ_oxCSFOdCWvDarW5ze891DGTLdB821cmbFpPO-xoAtZYUfN6dRdL8d_5INYuK5qSvC7qjfPt-hU8TPz2jY5qhoYm7hvbHiA4IJkE_nog77UK2BrafYQvQTSFAXhEjRVVpJbax-SYJkrpNZlH3fDZSx6XzBf_Q6St3KASft7WK7Jyt3nEjOwMaHT3lZrtduGuS7aPnE9rFz7Wi_i4U_t2FV_GllpDpZAlG3r5s-U3WO6m7wby7_dNeNqUgNKnxTxkb4XsQ83wUjiEiiCQrNQ0D5K2Px1dbMD855RJemIi5u6Q0dwItTCwA0kjsY4kP16Li-6aRVVy9LzdLV64DRmHFevRuhMmqSBwIiZycwPQEAGF56Az3WkRsw1T6nvEKlRl-IdJ7yLgf8px8duRyVWC0)
+![UC_5. Редагування існуючої форми - Діаграма прецедентів](https://www.plantuml.com/plantuml/png/bPJDYXD14CVl_HJ5UdK39l4YIrWHruit4Jm8CaoQTJ2Po7G7_43ORDRrfY0o0Gz-l44sQzmnCSahLBsH_-uXxGoAYuSmtLNr_rLrLP5zOwFC3lizPPuawTCeY_fa4zlJ1uFKtajUQ6gsbJVG_LkFhZU8l_2Sl_6KpsNCCtnNl99t9BcCS1ZBMtd3QvcGdE1pn3-vU9Zo1ycT0lSfB5FY3OvpEVMeENJ729Wf5SLsaD7EpMu_INSeCXIvqzRCNxcGaHn30OZtc-V6whvIGwFZo6Z4_7TvdgExYJqOPFqAwBta02qGL21bGG1iN7vUywBEA-Hru7aQEdMjGlh4P-xbZXBYP4oWBrrfHt-hUCjfLYk2QouZp-4BC78O2iTPrz_ZbQsASi9dKBf4vwLw3UKQsPQ---DAMLjvkoOFkIu2wJj-W5ojQEjSdCeP3UDO6qDNxYQ7Z-sTJEjKATSYQZGweVDqW_RsaZJk3Rkwqt7-vYN-rYN-zh_ymOoOK64zHFdbeztTZXze_TgiNrlrQrkLY-dlORTKfcCRfOUzSfW5BtZf5sWbETRBxPcCiIUdsAx93hrKHBzdyD7rLawWo7bH3d7c9Y4Z67xuHjz-W2ghci_GO2CmZOMBtxYD9kIRokYFIOQb0wMfWAbroA7H7ltCwhHhu0tzTU4Lpokbzd5mVoY_0000)
 
+### Use case 6. publishForm - Публікація форми
+
+Адміністратор має створену повністю готову форму та хоче її опублікувати <br>
+Основні кроки:
+
+- Admin відкриває форму для публікації.
+- Обирає параметри публікації (посилання, вбудовування на вебсайті).
+- Керує доступом (хто може заповнювати форму).
+- Публікує форму.
+
+![UC_6. Публікація форми - Діаграма прецедентів](https://www.plantuml.com/plantuml/png/XLDTQnD157sVNp7KvmRS11-aX8fONtmJmGT1ritGBkvkoiui-87G9jA-Y8981455y0TiOm9BsYH_uSu_yimDkyvQQ1wIpBttd3DpxptProRCJP4cGh-Ci-Cm3rDfOfEeWs5c7iTlb0nwGd16Fhd__4v7qayxfWkwj1DQK6dFxCH-alOzhUm9NL7rBAClA9Nq1t69J2bfZUFSdj6SPlWixGY0gH1XP8QvtBatIEDiHuPQXkvKf-aNLVRKZi202DVrQsrKAaIXLHHg1SpDRs7ISV4YYVNHmJ1FFU9dK6Qq0Ax25LL3icE9_2LaQ7rD-oiBOWotFQKVTE4wTIhWuB1fUsv7Jln6cS2J-GR62Q3JMcf6AzS-KcjQqLNDwVfN--8Drs-cPlKyrcykyc9MlW0Y2D0I1QYKxHSWsmm6I9uRr_ZISxVGpOgAA59QorkFuiCZyp1NAXF2JKnsEdr_5_AktDkBioWf1ghVTv1WEwIx7TBR0l4hG3OFRgC4Mr7kxlPvtUqmQ8VTTjWJ6vjox9jFv2eoONQOiF-eeWN6-T6Uqz9Ef3sbYiVPMEIjaFBVqhxJlBKFSFZy0Kpd79hoz-P_yk0fdWnss-t0Z-t8O_g2MttFge60x7yJvDimFlNAg6oW0QYtm0olyaxiuxT8axy0)
