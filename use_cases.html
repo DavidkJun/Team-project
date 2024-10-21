@@ -287,6 +287,47 @@
 <li>Система видаляє форму та всі пов'язані дані. Система забезпечує перевірку на відсутність конфліктів з іншими процесами, які можуть використовувати дані цієї форми.</li>
 </ul>
 <p><img src="http://www.plantuml.com/plantuml/png/XLDDYnD14BtthoZYUGDEFCaILlpmuaq43u8CasOTpCpAT0VyG329h1v4GPRnfWZ-W34cC2Jkv2zK_IDVzp1BRrZYQQQwtgjw_QhwoDYui9DihCppD7yH5t56DhLZVUyajm_JrvgY6yeVqAFRJ-_eiRP85LcV-2lNlEIADxpYSpwNBoJlkP5t_9Vh9pcVIOda7yGLJYhYBNvNSWhqqZ5a1i12gJYn9mNrResoDEzHR2XsVzqn_-HQfZ830qLythmoLcTAJOnEOgE1sQV4KqONkaEMb62j0QjHloQPyjOruuRN5mKy7JU_7X2_ysztAq_gS38d5DkWDIzsrNGreg363zTSPW2lG5-s4lPm1m7tLziIde9KaIC0MkwmfMpTcYI9DeQkFKYFdzdxXTQvKkv2rEyF0sFe9XqUfdaodepqSEWGqNyHW_s8805SfsG7fFouwU1Ww6s-74QNmu5gP-_YSAQgq8cDy-DnjmnhJEApVF2koDIPAtCCx5HA-TQZDueec0GtRazu0rRjp6nawl5RcNi7xpw6BAAh_FUEhttORcd32vdB6VYV46CFIsZu210wj2-WSIy0cYftrDMF51hisENQmYlzqkfyPAxCHq7-hJh2rptaVm00" alt="UC 9. Видалення форми - Діаграма прецедентів" /></p>
+<h1 id="Діаграми-актовностей"><a class="header" href="#Діаграми-актовностей">Діаграми актовностей</a></h1>
+<p>##Діаграма активності для "Створити форму"</p>
+<div class="table-wrapper"><table><thead><tr><th>Поле</th><th>Значення</th></tr></thead><tbody>
+<tr><td>ID</td><td>createForm</td></tr>
+<tr><td>Назва</td><td>Створення форми</td></tr>
+<tr><td>Учасники</td><td>Admin, система</td></tr>
+<tr><td>Передумови</td><td>- Admin має обліковий запис <br> - Admin має доступ до інтерфейсу для створення форм</td></tr>
+<tr><td>Результат</td><td>✅ Нова форма створена та збережена у системі</td></tr>
+<tr><td>Виключні ситуації</td><td>⚠️ Помилки збереження <br> ⚠️ Неповні дані <br> ⚠️ Проблеми із сервером</td></tr>
+<tr><td>Основний сценарій</td><td>1. Admin створює форми для User. <br> 2. Відкриває інтерфейс для створення нової форми. <br> 3. Вводить назву форми, опис. <br> 4. Додає необхідні поля (текстові поля, радіо-кнопки, прапорці тощо). <br> 5. Налаштовує валідацію полів і зовнішній вигляд форми (стилі, кольори). <br> 6. Зберігає форму.</td></tr>
+</tbody></table>
+</div>
+<p>@startuml
+|Admin|
+start;
+: Відкриває інтерфейс для створення нової форми;
+: Вводить назву форми, опис;</p>
+<p>|Система|
+: Перевіряє введені дані;
+note right #FF6969
+<b> Можлива виключна ситуація
+<b> Неповні дані
+end note
+: Створює нову форму;</p>
+<p>|Admin|
+: Додає необхідні поля (текстові поля, радіо-кнопки, прапорці тощо);</p>
+<p>|Система|
+: Перевіряє правильність даних;
+note right #FF6969
+<b> Можлива виключна ситуація
+<b> Помилки збереження
+end note
+note right #FF6969
+<b> Можлива виключна ситуація
+<b> Проблеми із сервером
+end note
+: Зберігає форму у системі;</p>
+<p>|Admin|
+: Отримує підтвердження про успішне збереження форми;</p>
+<p>stop;
+@enduml</p>
 
                     </main>
 
