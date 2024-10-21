@@ -1,0 +1,33 @@
+@startuml
+title UC_5. Редагування існуючої форми\nДіаграма прецедентів
+
+actor "Admin" as admin
+actor "Система" as system
+
+usecase "Редагування існуючої форми" as editForm
+usecase "Відкрити список існуючих форм" as UC_1
+usecase "Обрати форму для редагування" as UC_2
+usecase "Внести зміни до форми" as UC_3
+usecase "Зберегти оновлену форму" as UC_4
+usecase "Зміни збережено, форму оновлено" as success #LightGreen
+
+UC_1 ..> editForm : <<include>>
+UC_2 ..> editForm : <<include>>
+UC_3 ..> editForm : <<include>>
+UC_4 ..> editForm : <<include>>
+editForm ..> success : <<include>>
+
+admin --> UC_1
+admin --> UC_2
+admin --> UC_3
+admin --> UC_4
+system --> editForm
+
+rectangle "Виключні ситуації" {
+  usecase "Конфлікти версій" as EX_1
+  usecase "Помилки під час збереження" as EX_2
+
+  editForm ..> EX_1 : extends
+  UC_4 ..>EX_2 : extends
+}
+@enduml

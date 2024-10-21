@@ -1,0 +1,33 @@
+@startuml
+title UC_5. Публікація форми\nДіаграма прецедентів
+
+actor "Admin" as admin
+actor "Система" as system
+
+usecase "Публікація форми" as publishForm
+usecase "Відкрити форму для публікації" as UC_1
+usecase "Обрати параметри публікації" as UC_2
+usecase "Керувати доступом" as UC_3
+usecase "Опублікувати форму" as UC_4
+usecase "Форма опублікована та доступна для користувачів" as success #LightGreen
+
+UC_1 ..> editForm : <<include>>
+UC_2 ..> editForm : <<include>>
+UC_3 ..> editForm : <<include>>
+UC_4 ..> editForm : <<include>>
+editForm ..> success : <<include>>
+
+admin --> UC_1
+admin --> UC_2
+admin --> UC_3
+admin --> UC_4
+system --> editForm
+
+rectangle "Виключні ситуації" {
+  usecase "Недоступність сервера" as EX_1
+  usecase "Відсутність доступу для публікації" as EX_2
+
+  editForm ..> EX_1 : extends
+  UC_4 ..>EX_2 : extends
+}
+@enduml
