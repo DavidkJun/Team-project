@@ -4,18 +4,20 @@
 
 ![](https://www.plantuml.com/plantuml/png/ZP6zIiDG5CVtFCMXpXridQKYEEaYk0boRIunaDn0xWrISAYjuAY3LEWcla0C3QRQrbVutpVoDBUnT7F89UVZ_piVfwUDI4qMHvxecoIb5gPOsI4gUsz7Tem2kNriaT1qeMLAUr4Ot9ZhA9D_-S-OOM4dMDf9hHcoOhHcrAeZFmxLHZQGKPJSUbwcPLzeIQqrybm6eJOolLHuHSxgqhuupgRw21LXXGzySv4l_YjGOKxuH8wVTP-kk-Eh_LtmQHA4YgdlA5WuTvpYVwZE5dKc_L1GFr56AaDwmBt6J7rp6qA91NBYfyICeNcxvYxh2Bzst22xM-H9aiOK2oK26JEKQLEKpRnOikw9x4Dz1eRpLpMG0y-hpz3EseTkv1spip5zPtOzjtqEtx63Gus34nok9vNFn_y5)
 
-##  Діаграма можливостей користувача
+## Діаграма можливостей користувача
 
 **Користувач** може виконувати такі основні дії:
+
 1. **Реєстрація облікового запису** – користувач створює новий акаунт для доступу до системи.
 2. **Вхід у систему** – після реєстрації користувач може входити у свій акаунт, використовуючи облікові дані.
 3. **Взаємодія з медіа-контентом** – після входу користувач отримує доступ до системи медіа-контенту та може переглядати, завантажувати або взаємодіяти з ним
 
 ![](https://www.plantuml.com/plantuml/png/ZT2nIiH040RWVfzYEEiKdhqSs6eZs0aIaoK6SXl8RWgxyomi1JbEiFK5OZ2OqpE-mZzlvEoU8kbibltPdM-6cLaNLwwU5qh5YIihck090o_Gymql-HOj6hwRK6pfpEgAzeeyktANHQsLggrEOgjfubzETPPRfwjpWqSq0dIy2iJY1rcY9mnumGUlyIwt5ZqsX3Sq-FBjTasEBlR7y76PvKRKPxHIkDavxV-ewHzrejCyfgGqJXj7zbfcdOlwu8juXQqehxpcUr58KkSJcYZmdzAq2-U0xQzze5JOI9H6Xs7iSPoEe_oUQPFwHNy3)
 
-##  Діаграма можливостей адміністратора
+## Діаграма можливостей адміністратора
 
 **Адміністратор** має можливість виконувати наступні дії:
+
 1. **Додавання форми** – адміністратор може додавати нові форми для взаємодії користувачів з системою.
 2. **Редагування форми** – адміністратор має можливість редагувати існуючі форми, змінюючи їхній вміст або параметри.
 3. **Видалення форми** – адміністратор може видаляти форми, які більше не використовуються або стали застарілими.
@@ -59,7 +61,6 @@
 - User отримує доступ до свого облікового запису
 
 ![UC_2. Логін користувача - Діаграма прецедентів](https://www.plantuml.com/plantuml/png/ZPNHIXjF5CRlVOf3l7R__-o6eaL5i7q24NfH2BjnjC5DLdOdjBOKagQDDwMK8WfjHQmli4Q3CTNu2cVUgD_CP9E0BaPGPlTyvpVVd7DsN4ka7yj6BPoJLHcAEHhzB6z7TKb9zRrOyLogH64KhmIXNzbTtLmlkmxnBnxofJhYE-813rMJ-wgbFgasTpbL1vpEGE93vAUWDF7tbbFYUonxgiCzliBl7NX7t3KaKTyYwz0y9hlL-fuV-pNoApAAD-H-ACX_AvAePXNsFHKs4n4No4z8BsX-SIae1c9Qm6VMEVUq1IFTs4-agD5y809tSSdYzc3Otn6qkVwYxDA7yUaQYQZuYQ32Sc0gi_nViFgwpkVSXVKROFl4NLAjoIQgRVr0RFo8fMU6zX4RFG9qYYFa3m2lU60ghR6wzfgeckepk3UgHTZq2zfoDRL5kVWurSset0MYPOX8lU2_uAAXsZzXlnIR74reRWvjxF8KDFHGfskdCtFpV7eZxWaoa6LuM0n7mtPl7WZ10O9jNP7fmtksfhOGv3ISLLltvzLw9MniYMGITfy8J-S_Bl6c1P1F95gJJTM2LTWqpEJe1HAiB1OLwTTtGjG0pUdp09NxfWvqkSmOcMEdgeFw7XTo1l7bgt9nNBUU-QfIzBaFr5SDUg8ZEZsFcytDCVGNggtxmJV4zx3K10iRP0Wt3-5beu8CuyDyUcQWht54Cq0OIXEzpMXU7gqqelryU0aHtt6F-5fx0-_Gn43LKOHWFAENREqVTXinD5AyaxX_adoDEuF6cq5JcjQChuIuklD6qdOKIH6FS_axZf3g9keUw079Ee4wu1L23l5l7fgh57t9kLsT2V64__0vdnDgUSeTGlJMuOx3PtPGW6rXVh3YInwEqw3kQz22-xzRokxgpEqQrlZdyWy0)
-
 
 | **Поле**              | **Значення**                                                                                                                                                                                                                         |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -120,9 +121,7 @@
 | Виключні ситуації | ⚠️ Помилки збереження <br> ⚠️ Неповні дані <br> ⚠️ Проблеми із сервером                                                                                                                                                                                                                                     |
 | Основний сценарій | 1. Admin створює форми для User. <br> 2. Відкриває інтерфейс для створення нової форми. <br> 3. Вводить назву форми, опис. <br> 4. Додає необхідні поля (текстові поля, радіо-кнопки, прапорці тощо). <br> 5. Налаштовує валідацію полів і зовнішній вигляд форми (стилі, кольори). <br> 6. Зберігає форму. |
 
-
 ![UC_4. Створення форми - Діаграма активності](http://www.plantuml.com/plantuml/png/hLFDojfG4DtVfxZGJGjsAzYKOZU-HulI2bMBJNTP6Atz0QbG96xQYcyGqqHJVv9Nc7cZdiD5JA2BRo5yV8bppypvcTps1__LsFyuU6U2bzr1VnWO5dpFFBFoGoD9vQWJoIMHM5SMXOjE9TE9Vf9C_cfeWJZfqcg8UY85m9bSv88I7eMmjBP0y-GikHlCCXfpdUg2k5WEakYiWcjO84eWGi-OGBPy8pFEue0pDfAH2sqHr2mX3aCJ558Aq8Z2OhvuPZZoUtRSV_FMjuywdMQhsJBFNx-myXCKUpavTspFvGWpt_KB9S6IKE0CpZ-3PEcQVc5yIMCr4jCRTYrvA6rxZGAZLYw6gZcTqP9Bc_2L51pZe1b-x7JEv1q1kHZmOxgN8rFWlCfHms9gB2bwYgTmGBuIJsPOyaXA4jE4PRD-a-B9mrDr8n0Ek1RKX1QkpLd7XFcT4zwWwKmwUh1oa9qJ9VlhftLB-xx4O47wQCieW5_xWL2o9_nFORLDhvqs0FzmWPKLM_w5jtmrgY_zD-Xvhm1r8MFXG3gQz6OLH-IrW8L4wLVKi_-cKhjbkCQZzvvfGoqkzpy0)
-
 
 ### Use case 5. editForm - Редагування існуючої форми
 
@@ -136,7 +135,18 @@
 
 ![UC_5. Редагування існуючої форми - Діаграма прецедентів](https://www.plantuml.com/plantuml/png/bPJDYXD14CVl_HJ5UdK39l4YIrWHruit4Jm8CaoQTJ2Po7G7_43ORDRrfY0o0Gz-l44sQzmnCSahLBsH_-uXxGoAYuSmtLNr_rLrLP5zOwFC3lizPPuawTCeY_fa4zlJ1uFKtajUQ6gsbJVG_LkFhZU8l_2Sl_6KpsNCCtnNl99t9BcCS1ZBMtd3QvcGdE1pn3-vU9Zo1ycT0lSfB5FY3OvpEVMeENJ729Wf5SLsaD7EpMu_INSeCXIvqzRCNxcGaHn30OZtc-V6whvIGwFZo6Z4_7TvdgExYJqOPFqAwBta02qGL21bGG1iN7vUywBEA-Hru7aQEdMjGlh4P-xbZXBYP4oWBrrfHt-hUCjfLYk2QouZp-4BC78O2iTPrz_ZbQsASi9dKBf4vwLw3UKQsPQ---DAMLjvkoOFkIu2wJj-W5ojQEjSdCeP3UDO6qDNxYQ7Z-sTJEjKATSYQZGweVDqW_RsaZJk3Rkwqt7-vYN-rYN-zh_ymOoOK64zHFdbeztTZXze_TgiNrlrQrkLY-dlORTKfcCRfOUzSfW5BtZf5sWbETRBxPcCiIUdsAx93hrKHBzdyD7rLawWo7bH3d7c9Y4Z67xuHjz-W2ghci_GO2CmZOMBtxYD9kIRokYFIOQb0wMfWAbroA7H7ltCwhHhu0tzTU4Lpokbzd5mVoY_0000)
 
+| **Поле**              | **Значення**                                                                                                                                                                                               |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **ID**                | editForm                                                                                                                                                                                                   |
+| **Назва**             | Редагування існуючої форми                                                                                                                                                                                 |
+| **Учасники**          | Admin, система                                                                                                                                                                                             |
+| **Передумови**        | Створена форма, що потребує змін                                                                                                                                                                           |
+| **Результат**         | ✅ Зміни збережено, форма оновлена                                                                                                                                                                         |
+| **Виключні ситуації** | ⚠️ Конфлікти версій <br> ⚠️ Помилки під час збереження                                                                                                                                                     |
+| **Основний сценарій** | 1. Admin відкриває список своїх існуючих форм. <br> 2. Обирає форму для редагування. <br> 3. Вносить необхідні зміни (додає/видаляє поля, змінює форматування або стилі). <br> 4. Зберігає оновлену форму. |
+
 ![UC_5. Редагування існуючої форми - Діаграма активності](https://www.plantuml.com/plantuml/png/hLFDhj9G4DwVfpZ1ZIOcxaYmnc2Cl829UvIgJQ0rfRfY0Qq_BWmanjIDOdm3AFJI53YymimRtMzEBqrpaxkuoLr0XkattyzCwOwZVXXz70sLcZmRZ3n_ecp7KOyr_UIKjbJob0hAQCM_DC_eH0M-3PMQKnH7JdZEtz3yelap6O0FTdX9QpIdCbO_u4I3SCyBZLyvoXLjE15kEe9fuS05_HS1Zl7yGAk9KFqJEM1sd80Cy8BMmYpYj-2k4qeqD0tF81Np3qqxpATe5Ve-9Wq-iFr8bAGKLX4-aP7oOOtdUICSHkAce4Qn9gDjc0A3wGExcBy2b8oIIMXByGBo4X5Qz1j3kOsm4LZhnfrKe0nNc5RsCl3aeCsXdZOoESeF8bU7thltaRxNwxKxxOvwylgffZ_GlQ1zTTvgiIMCoZsFQ5pj9u7Dhv1PsA7dWVzswBs9NhdXs0jyvVe3BVmAhixceRkfiXcRBOD6VkrQT-lgPV-J-o8CWx3Xft7k9GRaBOQkFQIys1o3MfQuXLf-lja93QC1cmcAlyjEiSlwA3KKTnb7mGT7TQ4eVw1B)
+
 ### Use case 6. publishForm - Публікація форми
 
 Адміністратор має створену повністю готову форму та хоче її опублікувати <br>
@@ -148,6 +158,16 @@
 - Публікує форму.
 
 ![UC_6. Публікація форми - Діаграма прецедентів](https://www.plantuml.com/plantuml/png/XLDTQnD157sVNp7KvmRS11-aX8fONtmJmGT1ritGBkvkoiui-87G9jA-Y8981455y0TiOm9BsYH_uSu_yimDkyvQQ1wIpBttd3DpxptProRCJP4cGh-Ci-Cm3rDfOfEeWs5c7iTlb0nwGd16Fhd__4v7qayxfWkwj1DQK6dFxCH-alOzhUm9NL7rBAClA9Nq1t69J2bfZUFSdj6SPlWixGY0gH1XP8QvtBatIEDiHuPQXkvKf-aNLVRKZi202DVrQsrKAaIXLHHg1SpDRs7ISV4YYVNHmJ1FFU9dK6Qq0Ax25LL3icE9_2LaQ7rD-oiBOWotFQKVTE4wTIhWuB1fUsv7Jln6cS2J-GR62Q3JMcf6AzS-KcjQqLNDwVfN--8Drs-cPlKyrcykyc9MlW0Y2D0I1QYKxHSWsmm6I9uRr_ZISxVGpOgAA59QorkFuiCZyp1NAXF2JKnsEdr_5_AktDkBioWf1ghVTv1WEwIx7TBR0l4hG3OFRgC4Mr7kxlPvtUqmQ8VTTjWJ6vjox9jFv2eoONQOiF-eeWN6-T6Uqz9Ef3sbYiVPMEIjaFBVqhxJlBKFSFZy0Kpd79hoz-P_yk0fdWnss-t0Z-t8O_g2MttFge60x7yJvDimFlNAg6oW0QYtm0olyaxiuxT8axy0)
+
+| **Поле**              | **Значення**                                                                                                                                                                                     |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **ID**                | publishForm                                                                                                                                                                                      |
+| **Назва**             | Публікація форми                                                                                                                                                                                 |
+| **Учасники**          | Admin, система                                                                                                                                                                                   |
+| **Передумови**        | Форма створена та готова для публікації                                                                                                                                                          |
+| **Результат**         | ✅ Форма опублікована та доступна для користувачів                                                                                                                                               |
+| **Виключні ситуації** | ⚠️ Недоступність сервера <br> ⚠️ Відсутність доступу для публікації                                                                                                                              |
+| **Основний сценарій** | 1. Admin відкриває форму для публікації. <br> 2. Обирає параметри публікації (посилання, вбудовування на вебсайті). <br> 3. Керує доступом (хто може заповнювати форму). <br> 4. Публікує форму. |
 
 ![UC_6. Публікація форми - Діаграма активності](https://www.plantuml.com/plantuml/png/hLFFYjDW4Bz_J_6nNbRmlB1MPFUoHn741qXtWnl8ffAaFVNGDcezI08YAOXQVOCsD1gJD7s5cJVoDr-CjL1ldhxCd_dzPdupkGX2om-7TwvIuykREySRA-FfgOUQtdDA6ofvGWLbjE8FcbzH0xFcI2DISQ9fnn6jgK9gYPGtdFB257-1jq0kof241vzKKyupmJjQfq-HsF0KT1MIjxJbv846zPeZq3MKuSswYCQpacYE-1JUdu1ExnloZ-2PS2JK6q54919iglKfl-OPDPfgcDyfr_G3jHBBW1eBFkB5NwEsa9zRFvZATgOI_0qAIuXnGilzE1nr82Szo4hVf0fc3ihLMB2MqXxiZ5EqcGXQsqr5XJXDm-_-eQqt26tjEozkGttlwkhi_EnSFUe_rlHfZs1qmKU9sfZdHYYHrSZG0YMcw9djZsp_kMUDBCUr-gwjREz62uD2duT37QpVIFAL6hDawPKNl3WK6-fm_ETCIgbiXVYjpnomsVyTvydWwR3lEi7jvVMr7GJxORhZDeVPNg1COKvJZXpRoSnEDd8ItNtju6WqqgQInM_XZOuj9SQQWt3migSkm2W_qoy0)
 
@@ -190,7 +210,6 @@
 ![UC 9. Видалення форми - Діаграма прецедентів](http://www.plantuml.com/plantuml/png/XLDDYnD14BtthoZYUGDEFCaILlpmuaq43u8CasOTpCpAT0VyG329h1v4GPRnfWZ-W34cC2Jkv2zK_IDVzp1BRrZYQQQwtgjw_QhwoDYui9DihCppD7yH5t56DhLZVUyajm_JrvgY6yeVqAFRJ-_eiRP85LcV-2lNlEIADxpYSpwNBoJlkP5t_9Vh9pcVIOda7yGLJYhYBNvNSWhqqZ5a1i12gJYn9mNrResoDEzHR2XsVzqn_-HQfZ830qLythmoLcTAJOnEOgE1sQV4KqONkaEMb62j0QjHloQPyjOruuRN5mKy7JU_7X2_ysztAq_gS38d5DkWDIzsrNGreg363zTSPW2lG5-s4lPm1m7tLziIde9KaIC0MkwmfMpTcYI9DeQkFKYFdzdxXTQvKkv2rEyF0sFe9XqUfdaodepqSEWGqNyHW_s8805SfsG7fFouwU1Ww6s-74QNmu5gP-_YSAQgq8cDy-DnjmnhJEApVF2koDIPAtCCx5HA-TQZDueec0GtRazu0rRjp6nawl5RcNi7xpw6BAAh_FUEhttORcd32vdB6VYV46CFIsZu210wj2-WSIy0cYftrDMF51hisENQmYlzqkfyPAxCHq7-hJh2rptaVm00)
 
 ![](http://www.plantuml.com/plantuml/png/hLFDIiD04BxlKonuyD9peLQaNleUIeiMR2irtd986sahY04fyI8MmGT8IrD3cfzNc7aZlzdOO4l1YvUmE_DzytqpEsdSMHS3wxvxevHztkfsUhOo4NMYwOLzMb7C3aMqf81dceUKKuHlHh7c1ygGI-e62ym2AKTmPOfTZGeRzZGAH3W6jA6GKahPCxIvIF08sP0TvDViWdu8h6pw46c0Gqeei0rTQBWlsMU7FPvLD4yeAlKfA6h5vbgmCw0XmYD-mjtJx4DW2b028kN0PJn6tI7q4QghNjzgwq7dwjhIHyrcjLQjgTFBCqrlABM6HGodr46lpt2G8e024KHS36GCUrv1-YoDyIE5VxfJxLvBYm6r7R8P2tkxGmPH783XemKfSimUVG6QIcHL7FwvbJb8611eCJ0GoQ0lg9pTNT-lq5zG24Cv1ZkH1YlIV_RxeQI7qkhU2i1xkPzIy1qwifL9iIxv_XPjr-RdFJLWGq7n5F7mu7vXxVktIZLWtFmDtm00)
-
 
 # Діаграми активностей
 
