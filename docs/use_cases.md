@@ -155,39 +155,4 @@
 | Основний сценарій | 1. Admin створює форми для User. <br> 2. Відкриває інтерфейс для створення нової форми. <br> 3. Вводить назву форми, опис. <br> 4. Додає необхідні поля (текстові поля, радіо-кнопки, прапорці тощо). <br> 5. Налаштовує валідацію полів і зовнішній вигляд форми (стилі, кольори). <br> 6. Зберігає форму. |
 
 
-```planuml
-@startuml
-|Admin|
-start;
-: Відкриває інтерфейс для створення нової форми;
-: Вводить назву форми, опис;
-
-|Система|
-: Перевіряє введені дані;
-note right #FF6969
-<b> Можлива виключна ситуація
-<b> Неповні дані
-end note
-: Створює нову форму;
-
-|Admin|
-: Додає необхідні поля (текстові поля, радіо-кнопки, прапорці тощо);
-
-|Система|
-: Перевіряє правильність даних;
-note right #FF6969
-<b> Можлива виключна ситуація
-<b> Помилки збереження
-end note
-note right #FF6969
-<b> Можлива виключна ситуація
-<b> Проблеми із сервером
-end note
-: Зберігає форму у системі;
-
-|Admin|
-: Отримує підтвердження про успішне збереження форми;
-
-stop;
-@enduml
-```
+!(http://www.plantuml.com/plantuml/png/hLFDojfG4DtVfxZGJGjsAzYKOZU-HulI2bMBJNTP6Atz0QbG96xQYcyGqqHJVv9Nc7cZdiD5JA2BRo5yV8bppypvcTps1__LsFyuU6U2bzr1VnWO5dpFFBFoGoD9vQWJoIMHM5SMXOjE9TE9Vf9C_cfeWJZfqcg8UY85m9bSv88I7eMmjBP0y-GikHlCCXfpdUg2k5WEakYiWcjO84eWGi-OGBPy8pFEue0pDfAH2sqHr2mX3aCJ558Aq8Z2OhvuPZZoUtRSV_FMjuywdMQhsJBFNx-myXCKUpavTspFvGWpt_KB9S6IKE0CpZ-3PEcQVc5yIMCr4jCRTYrvA6rxZGAZLYw6gZcTqP9Bc_2L51pZe1b-x7JEv1q1kHZmOxgN8rFWlCfHms9gB2bwYgTmGBuIJsPOyaXA4jE4PRD-a-B9mrDr8n0Ek1RKX1QkpLd7XFcT4zwWwKmwUh1oa9qJ9VlhftLB-xx4O47wQCieW5_xWL2o9_nFORLDhvqs0FzmWPKLM_w5jtmrgY_zD-Xvhm1r8MFXG3gQz6OLH-IrW8L4wLVKi_-cKhjbkCQZzvvfGoqkzpy0)
