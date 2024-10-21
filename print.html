@@ -891,8 +891,8 @@
 <li>Система видаляє форму та всі пов'язані дані. Система забезпечує перевірку на відсутність конфліктів з іншими процесами, які можуть використовувати дані цієї форми.</li>
 </ul>
 <p><img src="http://www.plantuml.com/plantuml/png/XLDDYnD14BtthoZYUGDEFCaILlpmuaq43u8CasOTpCpAT0VyG329h1v4GPRnfWZ-W34cC2Jkv2zK_IDVzp1BRrZYQQQwtgjw_QhwoDYui9DihCppD7yH5t56DhLZVUyajm_JrvgY6yeVqAFRJ-_eiRP85LcV-2lNlEIADxpYSpwNBoJlkP5t_9Vh9pcVIOda7yGLJYhYBNvNSWhqqZ5a1i12gJYn9mNrResoDEzHR2XsVzqn_-HQfZ830qLythmoLcTAJOnEOgE1sQV4KqONkaEMb62j0QjHloQPyjOruuRN5mKy7JU_7X2_ysztAq_gS38d5DkWDIzsrNGreg363zTSPW2lG5-s4lPm1m7tLziIde9KaIC0MkwmfMpTcYI9DeQkFKYFdzdxXTQvKkv2rEyF0sFe9XqUfdaodepqSEWGqNyHW_s8805SfsG7fFouwU1Ww6s-74QNmu5gP-_YSAQgq8cDy-DnjmnhJEApVF2koDIPAtCCx5HA-TQZDueec0GtRazu0rRjp6nawl5RcNi7xpw6BAAh_FUEhttORcd32vdB6VYV46CFIsZu210wj2-WSIy0cYftrDMF51hisENQmYlzqkfyPAxCHq7-hJh2rptaVm00" alt="UC 9. Видалення форми - Діаграма прецедентів" /></p>
-<h1 id="Діаграми-актовностей"><a class="header" href="#Діаграми-актовностей">Діаграми актовностей</a></h1>
-<p>##Діаграма активності для "Створити форму"</p>
+<h1 id="Діаграми-активностей"><a class="header" href="#Діаграми-активностей">Діаграми активностей</a></h1>
+<h3 id="Діаграма-активності-для-Створити-форму"><a class="header" href="#Діаграма-активності-для-Створити-форму">Діаграма активності для "Створити форму"</a></h3>
 <div class="table-wrapper"><table><thead><tr><th>Поле</th><th>Значення</th></tr></thead><tbody>
 <tr><td>ID</td><td>createForm</td></tr>
 <tr><td>Назва</td><td>Створення форми</td></tr>
@@ -903,35 +903,7 @@
 <tr><td>Основний сценарій</td><td>1. Admin створює форми для User. <br> 2. Відкриває інтерфейс для створення нової форми. <br> 3. Вводить назву форми, опис. <br> 4. Додає необхідні поля (текстові поля, радіо-кнопки, прапорці тощо). <br> 5. Налаштовує валідацію полів і зовнішній вигляд форми (стилі, кольори). <br> 6. Зберігає форму.</td></tr>
 </tbody></table>
 </div>
-<p>@startuml
-|Admin|
-start;
-: Відкриває інтерфейс для створення нової форми;
-: Вводить назву форми, опис;</p>
-<p>|Система|
-: Перевіряє введені дані;
-note right #FF6969
-<b> Можлива виключна ситуація
-<b> Неповні дані
-end note
-: Створює нову форму;</p>
-<p>|Admin|
-: Додає необхідні поля (текстові поля, радіо-кнопки, прапорці тощо);</p>
-<p>|Система|
-: Перевіряє правильність даних;
-note right #FF6969
-<b> Можлива виключна ситуація
-<b> Помилки збереження
-end note
-note right #FF6969
-<b> Можлива виключна ситуація
-<b> Проблеми із сервером
-end note
-: Зберігає форму у системі;</p>
-<p>|Admin|
-: Отримує підтвердження про успішне збереження форми;</p>
-<p>stop;
-@enduml</p>
+<p><img src="http://www.plantuml.com/plantuml/png/hLFDojfG4DtVfxZGJGjsAzYKOZU-HulI2bMBJNTP6Atz0QbG96xQYcyGqqHJVv9Nc7cZdiD5JA2BRo5yV8bppypvcTps1__LsFyuU6U2bzr1VnWO5dpFFBFoGoD9vQWJoIMHM5SMXOjE9TE9Vf9C_cfeWJZfqcg8UY85m9bSv88I7eMmjBP0y-GikHlCCXfpdUg2k5WEakYiWcjO84eWGi-OGBPy8pFEue0pDfAH2sqHr2mX3aCJ558Aq8Z2OhvuPZZoUtRSV_FMjuywdMQhsJBFNx-myXCKUpavTspFvGWpt_KB9S6IKE0CpZ-3PEcQVc5yIMCr4jCRTYrvA6rxZGAZLYw6gZcTqP9Bc_2L51pZe1b-x7JEv1q1kHZmOxgN8rFWlCfHms9gB2bwYgTmGBuIJsPOyaXA4jE4PRD-a-B9mrDr8n0Ek1RKX1QkpLd7XFcT4zwWwKmwUh1oa9qJ9VlhftLB-xx4O47wQCieW5_xWL2o9_nFORLDhvqs0FzmWPKLM_w5jtmrgY_zD-Xvhm1r8MFXG3gQz6OLH-IrW8L4wLVKi_-cKhjbkCQZzvvfGoqkzpy0" alt="" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="Проєктування-бази-даних"><a class="header" href="#Проєктування-бази-даних">Проєктування бази даних</a></h1>
 <p>В рамках проекту розробляється:</p>
 <ul>
