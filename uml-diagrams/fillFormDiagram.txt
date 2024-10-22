@@ -1,0 +1,33 @@
+@startuml
+skinparam titleFontSize 24
+title UC_8. Заповнення форми\nДіаграма прецедентів
+
+actor "User" as user
+actor "Система" as system
+
+usecase "Заповнення форми" as fillForm
+usecase "User відкриває посилання на форму" as openLink
+usecase "Заповнює поля форми" as fillFields
+usecase "Натискає на кнопку 'Надіслати'" as submitForm
+usecase "Дані форми збережені в системі" as formSaved #LightGreen
+
+openLink ..> fillForm : <<include>>
+fillFields ..> fillForm : <<include>>
+submitForm ..> fillForm : <<include>>
+fillForm ..> formSaved : <<include>>
+
+user --> openLink
+user --> fillFields
+user --> submitForm
+system --> fillForm
+
+rectangle "Виключні ситуації" {
+  usecase "Неправильне введення даних" as EX_1
+  usecase "Неповне заповнення" as EX_2
+  usecase "Технічні проблеми" as EX_3
+
+  fillForm ..> EX_1 : extends
+  fillForm ..> EX_2 : extends
+  fillForm ..> EX_3 : extends
+}
+@enduml
