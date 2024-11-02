@@ -1,0 +1,77 @@
+@startuml
+class User {
+    INT id
+    STRING name
+    STRING surname
+    STRING email
+    CHAR(8) password
+    LIST<Permission> permissions
+}
+
+class Admin {
+    INT id
+    STRING name
+    STRING surname
+    STRING email
+    CHAR(8) password
+    LIST<Permission> permissions
+}
+
+class Permission {
+    INT id
+    STRING name
+    STRING description
+}
+
+class Form {
+    INT id
+    STRING name
+    STRING description
+    LIST<Content> content
+}
+
+class FormResults {
+    INT id
+    INT formId
+    JSON answers
+}
+
+class Content {
+    INT id
+    ENUM type
+}
+
+class OpenAnswer {
+    INT id
+    TEXT text
+}
+
+class SingleChoice {
+    INT id
+    STRING variant
+}
+
+class MultiChoice {
+    INT id
+    JSON variants
+}
+
+class UploadedMedia {
+    INT id
+    UploadedMediaSource source
+}
+
+class UploadedMediaSource {
+    INT id
+    STRING url
+}
+
+User "1" -- "0..*" Permission : has_permissions
+Admin "1" -- "0..*" Permission : has_permissions
+Form "1" -- "0..*" FormResults : has_results
+Form "1" -- "0..*" Content : contains_content
+Content "1" -- "0..1" OpenAnswer : open_answer_content
+Content "1" -- "0..1" SingleChoice : single_choice_content
+Content "1" -- "0..1" MultiChoice : multi_choice_content
+UploadedMedia "1" -- "1" UploadedMediaSource : has_source
+@enduml
