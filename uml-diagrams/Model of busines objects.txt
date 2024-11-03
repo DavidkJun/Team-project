@@ -41,3 +41,78 @@ entity Permission.description #b3c6ff
 Permission.id --* Permission
 Permission.name --* Permission
 Permission.description --* Permission
+entity Form #4dffff
+entity Form.id #b3ffff
+entity Form.name #b3ffff
+entity Form.description #b3ffff
+entity Form.content #b3ffff
+
+Form.id -d-* Form
+Form.name -d-* Form
+Form.description -d-* Form
+Form.content --* Form
+
+entity FormResults #a6ff4d
+entity FormResults.id #d9ffb3
+entity FormResults.formId #d9ffb3
+entity FormResults.answers #d9ffb3
+
+FormResults.id -d-* FormResults
+FormResults.formId -d-* FormResults
+FormResults.answers --* FormResults
+
+entity Content #4dff79
+entity Content.id #b3ffc6
+entity Content.type #b3ffc6
+
+Content.id -d-* Content
+Content.type --* Content
+
+entity OpenAnswer #4dffd2
+entity OpenAnswer.id #b3ffec
+entity OpenAnswer.text #b3ffec
+
+OpenAnswer.id --* OpenAnswer
+OpenAnswer.text --* OpenAnswer
+
+entity SingleChoice #4d4dff
+entity SingleChoice.id #b3b3ff
+entity SingleChoice.variant #b3b3ff
+
+SingleChoice.id --* SingleChoice
+SingleChoice.variant --* SingleChoice
+
+entity MultiChoice #ff4dd3
+entity MultiChoice.id #ffb3ec
+entity MultiChoice.variants #ffb3ec
+
+MultiChoice.id --* MultiChoice
+MultiChoice.variants --* MultiChoice
+
+entity UploadedMedia #ff4d4d
+entity UploadedMedia.id #ffb3b3
+entity UploadedMedia.source #ffb3b3
+
+UploadedMedia.id -d-* UploadedMedia
+UploadedMedia.source --* UploadedMedia
+
+entity UploadedMediaSource #e1ff4d
+entity UploadedMediaSource.id #f2ffb3
+entity UploadedMediaSource.url #f2ffb3
+
+UploadedMediaSource.id --* UploadedMediaSource
+UploadedMediaSource.url --* UploadedMediaSource
+
+User "1,1" -- "0,*" Permission
+Admin "1,1" -- "0,*" Permission
+
+Form "0,*" -- "1" FormResults
+Form "0,*" -- "1" Content
+Content "0,1" -- "1" OpenAnswer
+Content "0,1" -- "1" SingleChoice
+Content "0,1" -- "1" MultiChoice
+UploadedMedia "1" -- "1" UploadedMediaSource
+
+ConnectToProjectRequest -[hidden]- Form
+ConnectToProjectRequest -[hidden]- User
+@enduml
