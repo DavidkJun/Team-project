@@ -1,0 +1,43 @@
+plaintext
+Copy code
+@startuml
+left to right direction
+
+entity User #ffd24d
+entity User.id #ffe699
+entity User.name #ffe699
+entity User.surname #ffe699
+entity User.email #ffe699
+entity User.password #ffe699
+entity User.permissions #ffe699
+
+User.id -d-* User
+User.name -d-* User
+User.surname -d-* User
+User.email -d-* User
+User.password -d-* User
+User.permissions --* User
+
+entity Admin #a64dff
+entity Admin.id #d9b3ff
+entity Admin.name #d9b3ff
+entity Admin.surname #d9b3ff
+entity Admin.email #d9b3ff
+entity Admin.password #d9b3ff
+entity Admin.permissions #d9b3ff
+
+Admin.id -d-* Admin
+Admin.name -d-* Admin
+Admin.surname -d-* Admin
+Admin.email -d-* Admin
+Admin.password -d-* Admin
+Admin.permissions --* Admin
+
+entity Permission #4d79ff
+entity Permission.id #b3c6ff
+entity Permission.name #b3c6ff
+entity Permission.description #b3c6ff
+
+Permission.id --* Permission
+Permission.name --* Permission
+Permission.description --* Permission
