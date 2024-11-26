@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="uk" class="light" dir="ltr">
+<html lang="uk" class="light sidebar-visible" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -7,7 +7,7 @@
 
 
         <!-- Custom HTML head -->
-        
+
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
@@ -30,15 +30,17 @@
 
         <!-- Custom theme stylesheets -->
 
-    </head>
-    <body class="sidebar-visible no-js">
-    <div id="body-container">
+
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
-
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script>
             try {
@@ -60,19 +62,16 @@
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
-            var html = document.querySelector('html');
+            const html = document.documentElement;
             html.classList.remove('light')
             html.classList.add(theme);
-            var body = document.querySelector('body');
-            body.classList.remove('no-js')
-            body.classList.add('js');
+            html.classList.add("js");
         </script>
 
         <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
-            var body = document.querySelector('body');
             var sidebar = null;
             var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
@@ -82,45 +81,25 @@
                 sidebar = 'hidden';
             }
             sidebar_toggle.checked = sidebar === 'visible';
-            body.classList.remove('sidebar-visible');
-            body.classList.add("sidebar-" + sidebar);
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Титульна сторінка</a></li><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Вступ</a></li><li class="chapter-item expanded "><a href="requirements.html"><strong aria-hidden="true">2.</strong> Розроблення загальних вимог до системи</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="state-of-the-art.html"><strong aria-hidden="true">2.1.</strong> Аналіз предметної області</a></li><li class="chapter-item expanded "><a href="stakeholders-needs.html"><strong aria-hidden="true">2.2.</strong> Запити зацікавлених осіб</a></li></ol></li><li class="chapter-item expanded "><a href="use_cases.html"><strong aria-hidden="true">3.</strong> Розроблення функціональних вимог до системи</a></li><li class="chapter-item expanded "><a href="design.html"><strong aria-hidden="true">4.</strong> Проєктування інформаційного забезпечення</a></li><li class="chapter-item expanded "><a href="software.html" class="active"><strong aria-hidden="true">5.</strong> Реалізація інформаційного та програмного забезпечення</a></li><li class="chapter-item expanded "><a href="test.html"><strong aria-hidden="true">6.</strong> Тестування працездатності системи</a></li><li class="chapter-item expanded "><a href="conclusion.html"><strong aria-hidden="true">7.</strong> Висновки</a></li></ol>
-            </div>
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
             </div>
         </nav>
 
-        <!-- Track and set sidebar scroll position -->
-        <script>
-            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
-            sidebarScrollbox.addEventListener('click', function(e) {
-                if (e.target.tagName === 'A') {
-                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
-                }
-            }, { passive: true });
-            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
-            sessionStorage.removeItem('sidebar-scroll');
-            if (sidebarScrollTop) {
-                // preserve sidebar scroll position when navigating via links within sidebar
-                sidebarScrollbox.scrollTop = sidebarScrollTop;
-            } else {
-                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
-                var activeSection = document.querySelector('#sidebar .active');
-                if (activeSection) {
-                    activeSection.scrollIntoView({ block: 'center' });
-                }
-            }
-        </script>
-
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
                         <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
@@ -174,9 +153,277 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="Реалізація-інформаційного-та-програмного-забезпечення"><a class="header" href="#Реалізація-інформаційного-та-програмного-забезпечення">Реалізація інформаційного та програмного забезпечення</a></h1>
-<p>В рамках проекту розробляється:</p>
+<p>В рамках проекту розробляється:
+-- MySQL Workbench Forward Engineering</p>
+<p>SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';</p>
+<hr />
+<p>-- Schema databaseLab5</p>
+<hr />
+<p>DROP SCHEMA IF EXISTS <code>databaseLab5</code> ;</p>
+<hr />
+<p>-- Schema databaseLab5</p>
+<hr />
+<p>CREATE SCHEMA IF NOT EXISTS <code>databaseLab5</code> DEFAULT CHARACTER SET utf8 ;
+USE <code>databaseLab5</code> ;</p>
+<hr />
+<p>-- Table <code>databaseLab5</code>.<code>User</code></p>
+<hr />
+<p>DROP TABLE IF EXISTS <code>databaseLab5</code>.<code>User</code> ;</p>
+<p>CREATE TABLE IF NOT EXISTS <code>databaseLab5</code>.<code>User</code> (
+<code>id</code> INT NOT NULL,
+<code>name</code> VARCHAR(45) NULL,
+<code>surname</code> VARCHAR(45) NULL,
+<code>email</code> VARCHAR(45) NULL,
+<code>password</code> CHAR(8) NULL,
+PRIMARY KEY (<code>id</code>))
+ENGINE = InnoDB;</p>
+<hr />
+<p>-- Table <code>databaseLab5</code>.<code>Admin</code></p>
+<hr />
+<p>DROP TABLE IF EXISTS <code>databaseLab5</code>.<code>Admin</code> ;</p>
+<p>CREATE TABLE IF NOT EXISTS <code>databaseLab5</code>.<code>Admin</code> (
+<code>id</code> INT NOT NULL,
+<code>name</code> VARCHAR(45) NULL,
+<code>surname</code> VARCHAR(45) NULL,
+<code>email</code> VARCHAR(45) NULL,
+<code>password</code> CHAR(8) NULL,
+PRIMARY KEY (<code>id</code>))
+ENGINE = InnoDB;</p>
+<hr />
+<p>-- Table <code>databaseLab5</code>.<code>Permission</code></p>
+<hr />
+<p>DROP TABLE IF EXISTS <code>databaseLab5</code>.<code>Permission</code> ;</p>
+<p>CREATE TABLE IF NOT EXISTS <code>databaseLab5</code>.<code>Permission</code> (
+<code>name</code> VARCHAR(45) NULL,
+<code>description</code> VARCHAR(255) NULL,
+<code>id</code> INT NOT NULL,
+<code>User_id</code> INT NOT NULL,
+<code>Admin_id</code> INT NOT NULL,
+PRIMARY KEY (<code>id</code>, <code>User_id</code>, <code>Admin_id</code>),
+INDEX <code>fk_Permission_User_idx</code> (<code>User_id</code> ASC) VISIBLE,
+INDEX <code>fk_Permission_Admin1_idx</code> (<code>Admin_id</code> ASC) VISIBLE,
+CONSTRAINT <code>fk_Permission_User</code>
+FOREIGN KEY (<code>User_id</code>)
+REFERENCES <code>databaseLab5</code>.<code>User</code> (<code>id</code>)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION,
+CONSTRAINT <code>fk_Permission_Admin1</code>
+FOREIGN KEY (<code>Admin_id</code>)
+REFERENCES <code>databaseLab5</code>.<code>Admin</code> (<code>id</code>)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION)
+ENGINE = InnoDB;</p>
+<hr />
+<p>-- Table <code>databaseLab5</code>.<code>UploadedMedia</code></p>
+<hr />
+<p>DROP TABLE IF EXISTS <code>databaseLab5</code>.<code>UploadedMedia</code> ;</p>
+<p>CREATE TABLE IF NOT EXISTS <code>databaseLab5</code>.<code>UploadedMedia</code> (
+<code>id</code> INT NOT NULL,
+<code>source</code> INT NULL,
+PRIMARY KEY (<code>id</code>))
+ENGINE = InnoDB;</p>
+<hr />
+<p>-- Table <code>databaseLab5</code>.<code>UploadedMediaSource</code></p>
+<hr />
+<p>DROP TABLE IF EXISTS <code>databaseLab5</code>.<code>UploadedMediaSource</code> ;</p>
+<p>CREATE TABLE IF NOT EXISTS <code>databaseLab5</code>.<code>UploadedMediaSource</code> (
+<code>id</code> INT NOT NULL,
+<code>url</code> VARCHAR(255) NULL,
+<code>UploadedMedia_id</code> INT NOT NULL,
+PRIMARY KEY (<code>id</code>, <code>UploadedMedia_id</code>),
+INDEX <code>fk_UploadedMediaSource_UploadedMedia1_idx</code> (<code>UploadedMedia_id</code> ASC) VISIBLE,
+CONSTRAINT <code>fk_UploadedMediaSource_UploadedMedia1</code>
+FOREIGN KEY (<code>UploadedMedia_id</code>)
+REFERENCES <code>databaseLab5</code>.<code>UploadedMedia</code> (<code>id</code>)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION)
+ENGINE = InnoDB;</p>
+<hr />
+<p>-- Table <code>databaseLab5</code>.<code>Form</code></p>
+<hr />
+<p>DROP TABLE IF EXISTS <code>databaseLab5</code>.<code>Form</code> ;</p>
+<p>CREATE TABLE IF NOT EXISTS <code>databaseLab5</code>.<code>Form</code> (
+<code>id</code> INT NOT NULL,
+<code>name</code> VARCHAR(45) NULL,
+<code>description</code> VARCHAR(45) NULL,
+<code>content</code> JSON NULL,
+PRIMARY KEY (<code>id</code>))
+ENGINE = InnoDB;</p>
+<hr />
+<p>-- Table <code>databaseLab5</code>.<code>FormResult</code></p>
+<hr />
+<p>DROP TABLE IF EXISTS <code>databaseLab5</code>.<code>FormResult</code> ;</p>
+<p>CREATE TABLE IF NOT EXISTS <code>databaseLab5</code>.<code>FormResult</code> (
+<code>id</code> INT NOT NULL,
+<code>formid</code> INT NULL,
+<code>answer</code> JSON NULL,
+<code>Form_id</code> INT NOT NULL,
+PRIMARY KEY (<code>id</code>, <code>Form_id</code>),
+INDEX <code>fk_FormResult_Form1_idx</code> (<code>Form_id</code> ASC) VISIBLE,
+CONSTRAINT <code>fk_FormResult_Form1</code>
+FOREIGN KEY (<code>Form_id</code>)
+REFERENCES <code>databaseLab5</code>.<code>Form</code> (<code>id</code>)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION)
+ENGINE = InnoDB;</p>
+<hr />
+<p>-- Table <code>databaseLab5</code>.<code>Content</code></p>
+<hr />
+<p>DROP TABLE IF EXISTS <code>databaseLab5</code>.<code>Content</code> ;</p>
+<p>CREATE TABLE IF NOT EXISTS <code>databaseLab5</code>.<code>Content</code> (
+<code>id</code> INT NOT NULL,
+<code>type</code> ENUM("answer") NULL,
+<code>Form_id</code> INT NOT NULL,
+PRIMARY KEY (<code>id</code>, <code>Form_id</code>),
+INDEX <code>fk_Content_Form1_idx</code> (<code>Form_id</code> ASC) VISIBLE,
+CONSTRAINT <code>fk_Content_Form1</code>
+FOREIGN KEY (<code>Form_id</code>)
+REFERENCES <code>databaseLab5</code>.<code>Form</code> (<code>id</code>)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION)
+ENGINE = InnoDB;</p>
+<hr />
+<p>-- Table <code>databaseLab5</code>.<code>OpenAnswer</code></p>
+<hr />
+<p>DROP TABLE IF EXISTS <code>databaseLab5</code>.<code>OpenAnswer</code> ;</p>
+<p>CREATE TABLE IF NOT EXISTS <code>databaseLab5</code>.<code>OpenAnswer</code> (
+<code>id</code> INT NOT NULL,
+<code>text</code> TEXT NULL,
+<code>Content_id</code> INT NOT NULL,
+PRIMARY KEY (<code>id</code>, <code>Content_id</code>),
+INDEX <code>fk_OpenAnswer_Content1_idx</code> (<code>Content_id</code> ASC) VISIBLE,
+CONSTRAINT <code>fk_OpenAnswer_Content1</code>
+FOREIGN KEY (<code>Content_id</code>)
+REFERENCES <code>databaseLab5</code>.<code>Content</code> (<code>id</code>)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION)
+ENGINE = InnoDB;</p>
+<hr />
+<p>-- Table <code>databaseLab5</code>.<code>SingleChoise</code></p>
+<hr />
+<p>DROP TABLE IF EXISTS <code>databaseLab5</code>.<code>SingleChoise</code> ;</p>
+<p>CREATE TABLE IF NOT EXISTS <code>databaseLab5</code>.<code>SingleChoise</code> (
+<code>id</code> INT NOT NULL,
+<code>variant</code> VARCHAR(45) NULL,
+<code>Content_id</code> INT NOT NULL,
+PRIMARY KEY (<code>id</code>, <code>Content_id</code>),
+INDEX <code>fk_SingleChoise_Content1_idx</code> (<code>Content_id</code> ASC) VISIBLE,
+CONSTRAINT <code>fk_SingleChoise_Content1</code>
+FOREIGN KEY (<code>Content_id</code>)
+REFERENCES <code>databaseLab5</code>.<code>Content</code> (<code>id</code>)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION)
+ENGINE = InnoDB;</p>
+<hr />
+<p>-- Table <code>databaseLab5</code>.<code>MultiChoise</code></p>
+<hr />
+<p>DROP TABLE IF EXISTS <code>databaseLab5</code>.<code>MultiChoise</code> ;</p>
+<p>CREATE TABLE IF NOT EXISTS <code>databaseLab5</code>.<code>MultiChoise</code> (
+<code>id</code> INT NOT NULL,
+<code>variants</code> JSON NULL,
+<code>Content_id</code> INT NOT NULL,
+PRIMARY KEY (<code>id</code>, <code>Content_id</code>),
+INDEX <code>fk_MultiChoise_Content1_idx</code> (<code>Content_id</code> ASC) VISIBLE,
+CONSTRAINT <code>fk_MultiChoise_Content1</code>
+FOREIGN KEY (<code>Content_id</code>)
+REFERENCES <code>databaseLab5</code>.<code>Content</code> (<code>id</code>)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION)
+ENGINE = InnoDB;</p>
+<p>SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;</p>
+<hr />
+<p>-- Data for table <code>databaseLab5</code>.<code>User</code></p>
+<hr />
+<p>START TRANSACTION;
+USE <code>databaseLab5</code>;
+INSERT INTO <code>databaseLab5</code>.<code>User</code> (<code>id</code>, <code>name</code>, <code>surname</code>, <code>email</code>, <code>password</code>) VALUES (1, 'David', 'Krykota', 'a@gmail.com', 'a111');
+INSERT INTO <code>databaseLab5</code>.<code>User</code> (<code>id</code>, <code>name</code>, <code>surname</code>, <code>email</code>, <code>password</code>) VALUES (2, 'Tymur', 'Naboka', 'b@gmail.com', 'b222');
+INSERT INTO <code>databaseLab5</code>.<code>User</code> (<code>id</code>, <code>name</code>, <code>surname</code>, <code>email</code>, <code>password</code>) VALUES (3, 'Nika', 'Maslo', 'c@gmail.com', 'c333');</p>
+<p>COMMIT;</p>
+<hr />
+<p>-- Data for table <code>databaseLab5</code>.<code>Admin</code></p>
+<hr />
+<p>START TRANSACTION;
+USE <code>databaseLab5</code>;
+INSERT INTO <code>databaseLab5</code>.<code>Admin</code> (<code>id</code>, <code>name</code>, <code>surname</code>, <code>email</code>, <code>password</code>) VALUES (1, 'admin', 'adminovich', 'admin@gmail.com', 'admin111');</p>
+<p>COMMIT;</p>
+<hr />
+<p>-- Data for table <code>databaseLab5</code>.<code>Permission</code></p>
+<hr />
+<p>START TRANSACTION;
+USE <code>databaseLab5</code>;
+INSERT INTO <code>databaseLab5</code>.<code>Permission</code> (<code>name</code>, <code>description</code>, <code>id</code>, <code>User_id</code>, <code>Admin_id</code>) VALUES ('edit', 'allows to edit form', 1, 1, 1);
+INSERT INTO <code>databaseLab5</code>.<code>Permission</code> (<code>name</code>, <code>description</code>, <code>id</code>, <code>User_id</code>, <code>Admin_id</code>) VALUES ('answer', 'allows to chose an answer', 2, 1, 1);
+INSERT INTO <code>databaseLab5</code>.<code>Permission</code> (<code>name</code>, <code>description</code>, <code>id</code>, <code>User_id</code>, <code>Admin_id</code>) VALUES ('check_results', 'allows to check results', 3, 1, 1);</p>
+<p>COMMIT;</p>
+<hr />
+<p>-- Data for table <code>databaseLab5</code>.<code>UploadedMedia</code></p>
+<hr />
+<p>START TRANSACTION;
+USE <code>databaseLab5</code>;
+INSERT INTO <code>databaseLab5</code>.<code>UploadedMedia</code> (<code>id</code>, <code>source</code>) VALUES (1, 123);
+INSERT INTO <code>databaseLab5</code>.<code>UploadedMedia</code> (<code>id</code>, <code>source</code>) VALUES (2, 456);</p>
+<p>COMMIT;</p>
+<hr />
+<p>-- Data for table <code>databaseLab5</code>.<code>UploadedMediaSource</code></p>
+<hr />
+<p>START TRANSACTION;
+USE <code>databaseLab5</code>;
+INSERT INTO <code>databaseLab5</code>.<code>UploadedMediaSource</code> (<code>id</code>, <code>url</code>, <code>UploadedMedia_id</code>) VALUES (1, 'media.com', 1);
+INSERT INTO <code>databaseLab5</code>.<code>UploadedMediaSource</code> (<code>id</code>, <code>url</code>, <code>UploadedMedia_id</code>) VALUES (2, 'othermedia.com', 2);</p>
+<p>COMMIT;</p>
+<hr />
+<p>-- Data for table <code>databaseLab5</code>.<code>Form</code></p>
+<hr />
+<p>START TRANSACTION;
+USE <code>databaseLab5</code>;
+INSERT INTO <code>databaseLab5</code>.<code>Form</code> (<code>id</code>, <code>name</code>, <code>description</code>, <code>content</code>) VALUES (1, 'wild animals of ukraine', 'choose the best choices for survival', '{"1": "Deers", "2": "Bears", "3": "Birds"}');
+INSERT INTO <code>databaseLab5</code>.<code>Form</code> (<code>id</code>, <code>name</code>, <code>description</code>, <code>content</code>) VALUES (2, 'emotions', 'which emotions you experience the most', '{"1": "Emotion1","2":"Emotion2","3":"Emotion3"}');</p>
+<p>COMMIT;</p>
+<hr />
+<p>-- Data for table <code>databaseLab5</code>.<code>FormResult</code></p>
+<hr />
+<p>START TRANSACTION;
+USE <code>databaseLab5</code>;
+INSERT INTO <code>databaseLab5</code>.<code>FormResult</code> (<code>id</code>, <code>formid</code>, <code>answer</code>, <code>Form_id</code>) VALUES (1, 1, '{"1":"a","2":"c","3":"b"}', 1);
+INSERT INTO <code>databaseLab5</code>.<code>FormResult</code> (<code>id</code>, <code>formid</code>, <code>answer</code>, <code>Form_id</code>) VALUES (2, 2, '{"1":"d","2":"a","3":"c","4":"a"}', 2);</p>
+<p>COMMIT;</p>
+<hr />
+<p>-- Data for table <code>databaseLab5</code>.<code>Content</code></p>
+<hr />
+<p>START TRANSACTION;
+USE <code>databaseLab5</code>;
+INSERT INTO <code>databaseLab5</code>.<code>Content</code> (<code>id</code>, <code>type</code>, <code>Form_id</code>) VALUES (1, 'answer', 1);</p>
+<p>COMMIT;</p>
+<hr />
+<p>-- Data for table <code>databaseLab5</code>.<code>OpenAnswer</code></p>
+<hr />
+<p>START TRANSACTION;
+USE <code>databaseLab5</code>;
+INSERT INTO <code>databaseLab5</code>.<code>OpenAnswer</code> (<code>id</code>, <code>text</code>, <code>Content_id</code>) VALUES (1, 'I love wild animals of Ukraine and wish to protect them', 1);</p>
+<p>COMMIT;</p>
+<hr />
+<p>-- Data for table <code>databaseLab5</code>.<code>SingleChoise</code></p>
+<hr />
+<p>START TRANSACTION;
+USE <code>databaseLab5</code>;
+INSERT INTO <code>databaseLab5</code>.<code>SingleChoise</code> (<code>id</code>, <code>variant</code>, <code>Content_id</code>) VALUES (1, 'a', 1);
+INSERT INTO <code>databaseLab5</code>.<code>SingleChoise</code> (<code>id</code>, <code>variant</code>, <code>Content_id</code>) VALUES (2, 'sadness', 1);
+INSERT INTO <code>databaseLab5</code>.<code>SingleChoise</code> (<code>id</code>, <code>variant</code>, <code>Content_id</code>) VALUES (3, 'Deer', 1);</p>
+<p>COMMIT;</p>
+<hr />
+<p>-- Data for table <code>databaseLab5</code>.<code>MultiChoise</code></p>
+<hr />
+<p>START TRANSACTION;
+USE <code>databaseLab5</code>;
+INSERT INTO <code>databaseLab5</code>.<code>MultiChoise</code> (<code>id</code>, <code>variants</code>, <code>Content_id</code>) VALUES (1, '{"1":"a","2":"b","3":"c"}', 1);
+INSERT INTO <code>databaseLab5</code>.<code>MultiChoise</code> (<code>id</code>, <code>variants</code>, <code>Content_id</code>) VALUES (2, '{"1":"d","2":"b","3":"c"}', 1);</p>
+<p>COMMIT;</p>
 <ul>
-<li>SQL-скрипт для створення на початкового наповнення бази даних</li>
 <li>RESTfull сервіс для управління даними</li>
 </ul>
 
