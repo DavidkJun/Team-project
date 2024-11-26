@@ -1,6 +1,8 @@
 # Реалізація інформаційного та програмного забезпечення
 
 В рамках проекту розробляється: 
+
+```sql
 -- MySQL Workbench Forward Engineering
 
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
