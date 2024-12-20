@@ -341,5 +341,186 @@ INSERT INTO `databaseLab5`.`MultiChoise` (`id`, `variants`, `Content_id`) VALUES
 INSERT INTO `databaseLab5`.`MultiChoise` (`id`, `variants`, `Content_id`) VALUES (2, '{\"1\":\"d\",\"2\":\"b\",\"3\":\"c\"}', 1);
 
 COMMIT;
-- RESTfull сервіс для управління даними
+```
+## REST API для управління даними
 
+### Підключення до бази даних MySql
+
+#### config/db.js
+
+```javascript
+const { Sequelize } = require('sequelize');
+require('dotenv').config();
+
+const sequelize = new Sequelize(
+    process.env.DB_NAME,
+    process.env.DB_USER,
+    process.env.DB_PASSWORD,
+    {
+        host: process.env.DB_HOST,
+        dialect: 'mysql',
+        port: process.env.DB_PORT,
+    }
+);
+
+sequelize.authenticate()
+    .then(() => console.log('Database connected...'))
+    .catch((err) => console.error('Unable to connect to the database:', err));
+
+module.exports = sequelize;
+```
+### Налаштування сервера
+
+#### app.js
+
+```javascript
+const express = require('express');
+const bodyParser = require('body-parser');
+const adminRoutes = require('./routes/admin.routes');
+require('dotenv').config();
+require('./config/db'); // Ensure database connection
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.use(bodyParser.json());
+app.use('/api/admins', adminRoutes);
+
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
+```
+### Маршрутизація
+
+#### routes/admin.routes.js
+
+```javascript
+const express = require('express');
+const {
+    getAllAdmins,
+    getAdminById,
+    createAdmin,
+    updateAdmin,
+    deleteAdmin,
+} = require('../controllers/admin.controller');
+
+const router = express.Router();
+
+router.get('/', getAllAdmins);
+router.get('/:id', getAdminById);
+router.post('/', createAdmin);
+router.put('/:id', updateAdmin);
+router.delete('/:id', deleteAdmin);
+
+module.exports = router;
+```
+### Контролери
+
+#### controllers/admin.controller.js
+
+```javascript
+const Admin = require('../models/admin.model');
+
+exports.getAllAdmins = async (req, res) => {
+    try {
+        const admins = await Admin.findAll();
+        res.json(admins);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+};
+
+exports.getAdminById = async (req, res) => {
+    try {
+        const admin = await Admin.findByPk(req.params.id);
+        if (!admin) return res.status(404).json({ message: 'Admin not found' });
+        res.json(admin);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+};
+
+exports.createAdmin = async (req, res) => {
+    try {
+        const newAdmin = await Admin.create(req.body);
+        res.status(201).json(newAdmin);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+};
+
+exports.updateAdmin = async (req, res) => {
+    try {
+        const [updated] = await Admin.update(req.body, { where: { id: req.params.id } });
+        if (!updated) return res.status(404).json({ message: 'Admin not found' });
+        res.json({ message: 'Admin updated successfully' });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+};
+
+exports.deleteAdmin = async (req, res) => {
+    try {
+        const deleted = await Admin.destroy({ where: { id: req.params.id } });
+        if (!deleted) return res.status(404).json({ message: 'Admin not found' });
+        res.json({ message: 'Admin deleted successfully' });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+};
+
+```
+### Модель Адміна
+
+#### models/admin.model.js
+
+```javascript
+const { DataTypes } = require('sequelize');
+const sequelize = require('../config/db');
+
+const Admin = sequelize.define('Admin', {
+    id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true,
+    },
+    name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    surname: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    email: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: true,
+    },
+    password: {
+        type: DataTypes.STRING(8),
+        allowNull: false,
+    },
+}, {
+    tableName: 'Admin',
+    timestamps: false,
+});
+
+module.exports = Admin;
+
+```
+### Коди статусів HTTP
+
+#### utils/statusCodes.js
+
+```javascript
+const HTTP_STATUS_CODES = {
+  OK: 200,
+  CREATED: 201,
+  BAD_REQUEST: 400,
+  NOT_FOUND: 404,
+  INTERNAL_SERVER_ERROR: 500,
+};
+
+export default HTTP_STATUS_CODES;
+```
